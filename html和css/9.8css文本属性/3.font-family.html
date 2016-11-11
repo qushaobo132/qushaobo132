@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>font-family</title>
+	<link rel="stylesheet" href="demo.css">
+	<style type="text/css">
+	p{margin:10px;background:#ddd;}
+    p+p{margin-left:40px;}
+
+    .m-demo{font-family:arial;}
+    .m-demo .p1{font-family:arial,verdana,sans-serif;}
+    .m-demo .p2{font-family:verdana,"microsoft yahei";}
+    .m-demo .p3{font-family:"宋体",serif;}
+	</style>
+</head>
+<body>
+	<div class="m-demo">
+		<p>字体系列:arial</p>
+		<p class="p1">字体系列:font-family:arial,verdana,sans-serif</p>
+		<p class="p2">字体系列:font-family:verdana,"microsoft yahei"</p>
+		<p class="p3">字体系列:font-faily:"宋体",serif</p>
+	</div>
+</body>
+</html>

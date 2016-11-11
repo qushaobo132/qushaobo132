@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function padding(num){
+        return num <10?"0"+num:num;
+    }
+    //格式化日期
+    function formatDate(date){
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var dayOfMonth = date.getDate();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        return year+"/"+ padding(month) + "/"+padding(dayOfMonth)+" "+padding(hour)+":"
+                +padding(min)+":"+padding(sec);
+    }
+
+    var date = new Date();
+    date.setFullYear(2002);
+    date.setMonth(11);
+    date.setDate(25);
+    date.setHours(22);
+    date.setMinutes(28);
+    date.setSeconds(20);
+    console.log(formatDate(date));
+
+
+</script>
+</body>
+</html>

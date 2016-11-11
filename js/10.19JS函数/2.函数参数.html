@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function add(a,b){ //a b 形式参数
+        return a+b;
+    }
+    var x = add(1);  //实际参数，当实参数量少于形参，第二参数为undefined
+    console.log(1+undefined);  //NaN
+    console.log(x); //NaN
+    x = add(1,2,3);
+    console.log(x);//实参数量多于形参，按照形参个数来计算
+
+</script>
+</body>
+</html>

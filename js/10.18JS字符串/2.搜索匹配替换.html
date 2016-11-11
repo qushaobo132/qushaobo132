@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //字符串搜索
+    var str = "hello2016";
+    var index = str.search(/[0-9]/); //search返回匹配字符的索引位 /[0-9]/正则表达式，代表数字
+    index = str.search(/[a-zA-Z]/); ///[a-zA-Z]/代表字母
+    index = str.search(/[A-Z]/);  //不存在的匹配字符 返回-1
+    console.log(index);
+
+    //字符串匹配
+    var c = str.match(/[0-9]/); //match返回匹配的字符
+    c = str.match(/[0-9]/g); //g全局匹配
+    console.log(c);
+
+    //字符串替换
+    str = str.replace("2016","world");
+    console.log(str);
+
+    var str1 = "w1r3f4g5as23"; //把字符串中所有数字都替换成$
+    str1 = str1.replace(/[0-9]/g,"$");
+    console.log(str1);
+
+</script>
+</body>
+</html>

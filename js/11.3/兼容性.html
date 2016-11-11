@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <div id="test"data-user-name-x ='lisi'data-age ='20'data-gender = '男'></div>
+</div>
+</body>
+<script>
+    function $(id){
+
+        return document.getElementById(id);
+    }
+    //兼容版本dataset获取的办法
+    function getDataSet(elem){
+        if(elem.dataset){
+            return elem.dataset;
+        }else{
+            var dataSet = {};
+            var attrName;
+            var attrs = elem.attributes;
+            for(var i=0;i<attrs.length;i++){
+                if(!/^data-/.test(attrs[i].name)){
+                    continue;
+                }
+                attrName = attrs[i].name.slice(5);
+                attrName = attrName.replace(/\-([a-zA-Z])/g,function(value,lowerCase){
+                    return lowerCase.toUpperCase();
+                });
+                console.log(attrName);
+                dataSet[attrName] = attrs[i].value;
+            }
+            return dataSet;
+        }
+    }
+    var dataSet = getDataSet($("test"));
+    console.log(dataSet.userNameX+","+dataSet.age+","+dataSet.gender);
+</script>
+</html>

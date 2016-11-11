@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //用户输入体重(kg)和身高(m)来计算BMI值 :BMI = weight/(height*height)
+    //1.解决用户输入
+      var weight = Number(prompt("请输入体重：(单位是公斤)")); //Number()方法将字符串转成小数
+      var height = Number(prompt("请输入身高：单位是米"));
+//    var BMI = weight/(height*height);
+    var BMI = weight/Math.pow(height,2);
+    alert("经过计算，您的BMI值是:"+BMI);
+    if(BMI < 18.5){
+        alert("您的体重过轻，需要补一补");
+    }else if(BMI >=18.5 && BMI <24){
+        alert("您的体重还是很标准的，再有点腹肌就更完美了！");
+    }else if(BMI >=24 && BMI < 27){
+        alert("您是属于過重，需要适当锻炼一下");
+    }else if(BMI >= 27 && BMI< 30){
+        alert("您是輕度肥胖,需要稍微少吃点");
+    }else if(BMI >= 30 && BMI <35){
+        alert("您是中度肥胖");
+    }else if(BMI >= 35){
+        alert("您是重度肥胖，可得小心点儿了，一不小心就是脂肪肝，糖尿病");
+    }else{
+        alert("您还是人吗！");
+    }
+
+</script>
+</body>
+</html>

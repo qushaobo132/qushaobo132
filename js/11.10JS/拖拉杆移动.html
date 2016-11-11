@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width:400px;
+            height:7px;
+            background-color:#ccc;
+            position: relative;
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+        .dir{
+            width:6px;
+            height:16px;
+            position: absolute;
+            top:-4px;
+            left:0;
+            background-color:red;
+            cursor: pointer;
+        }
+        .mask{
+            width: 0;
+            height: 100%;
+            background-color:blue;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="dir"></div>
+    <div class="mask"></div>
+</div>
+<span>
+
+</span>
+</body>
+<script>
+    function $(id){
+        return document.getElementById(id)
+    }
+    var dir = $('box').children[0];
+    var mask = $('box').children[1];
+    dir.onmousedown = function(event){
+        var event = event || window.event;
+        var leftVal = event.clientX - this.offsetLeft;
+        document.onmousemove = function(event){
+            var num = parseInt(event.clientX-leftVal);
+            dir.style.left = num + 'px';
+            if(num<0){
+                dir.style.left = 0 + 'px';
+            }else if(num>390){
+                dir.style.left = 390 + 'px';
+            }
+            mask.style.width =dir.style.left;
+            var percentage = Math.floor(parseInt(dir.style.left)/390 * 100);
+            $("box").nextElementSibling.innerHTML = "已经走了" + percentage + "%";
+        }
+    };
+    document.onmouseup = function(){
+        document.onmousemove = null;
+    }
+
+</script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tab选项卡</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.container{
+			width: 572px;
+			border: 1px solid #999;
+			height: 200px;
+			margin: 100px auto;
+			font: 14px "微软雅黑";
+		}
+		.nav{
+			list-style: none;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+		}
+		.nav li{
+			float: left;
+			width: 190px;
+			background-color: #f1f1f1;
+			margin: 0;
+			border: 1px solid #cecece;
+			border-right: none;
+			border-top:none;
+			border-left: none;
+		}
+		.nav li:nth-child(2){  
+			border-left: 1px solid #cecece;
+			border-right: 1px solid #cecece;
+		}
+		.nav .cur{
+			background-color: #fff;
+			border-bottom: none;
+		}
+		.container div{
+			width: 100%;
+			background-color: #fff;
+			height:169px; 
+			padding: 20px;
+			display: none;
+			box-sizing:border-box;
+		}
+		.container .content-cur{
+			display: block;
+		}
+	</style>
+	<script>
+	window.onload=function(){
+		var box=document.getElementById("box");
+		var lis=box.getElementsByTagName("li");
+		var divs=box.getElementsByTagName("div");
+		//给给一个LI加鼠标经过时间
+		for(i=0;i<lis.length;i++){
+			//给LI添加一个index属性，等于当前索引值
+			lis[i].index=i;
+			lis[i].onmouseover=function(){
+				for(j=0;j<lis.length;j++){
+					lis[j].className="";
+					divs[j].className="";
+				}
+				this.className="cur";
+				divs[this.index].className="content-cur";
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+<div class="container" id="box">
+	<ul class="nav">
+		<li class="cur">课程</li>
+		<li>学习计划</li>
+		<li>技能图谱</li>
+	</ul>
+	<div class="content-cur">课程内容</div>
+	<div>学习计划内容</div>
+	<div>技能图谱内容</div>
+</div>
+</body>
+</html>

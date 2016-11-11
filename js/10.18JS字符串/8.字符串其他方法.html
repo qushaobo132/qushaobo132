@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str = " hello world ";
+    console.log(str);
+    console.log(str.trim());  //去掉两端空格
+
+    var s1 = "abc";
+    var s2 = "def";
+    console.log(s1.concat(s2)); //concat连接两个字符串，等价于 +
+
+    var str1 = "hello";
+    console.log(str1.indexOf("l"));  //第一次出现的索引位
+    console.log(str1.lastIndexOf("l")); //lastIndexOf最后一次出现的索引位
+
+    var str2 = "abc";
+    console.log(str2.charCodeAt(2)); //99
+
+    var str3 = "def"
+    console.log(str3.localeCompare(str2)); //localeCompare大于返回1 小于返回-1 相等返回0
+</script>
+</body>
+</html>

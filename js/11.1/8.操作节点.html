@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            width: 590px;
+            height: 340px;
+        }
+        .box{
+            width: 590px;
+            height: 340px;
+            border: 1px solid red;
+            margin: 100px auto;
+            overflow:hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        .btn{
+            width: 30px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, .1);
+            position: absolute;
+            top: 50%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            margin-top: -25px;
+            display: none;
+        }
+        .prev{
+            left:0;
+        }
+        .next{
+            right: 0;
+        }
+        .box:hover .btn{
+            display: block;
+        }
+        .btn:hover{
+            background-color: rgba(0, 0, 0, .6);
+        }
+        .pointer{
+            width: 160px;
+            height: 18px;
+            /*background-color: #ff0;*/
+            position: absolute;
+            left: 40px;
+            bottom: 30px;
+            z-index: 1;
+        }
+        .pointer i{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        .pointer .cur{
+            background-color: red;
+        }
+        .silder ul li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .silder .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="silder">
+        <ul>
+            <li class="show"><a href="#"><img src="01.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="02.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="03.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="04.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="05.jpg" alt=""/></a></li>
+            <div class="btn prev">&lt;</div>
+            <div class="btn next">&gt;</div>
+        </ul>
+    </div>
+    <div class="pointer" id="pointer">
+    <i class="cur"></i><i></i><i></i><i></i><i></i>
+    </div>
+</div>
+<script>
+    //创建节点 createElement
+    //插入节点 appendChild() insertBefore()
+    //删除节点 removeChild()
+    //克隆节点 cloneNode()
+    var box = document.getElementById("box");
+    var pointer = document.getElementById("pointer");
+    var span = document.createElement("span");
+    box.appendChild(span);
+    //insertBefore
+    box.insertBefore(span,pointer);  //insertBefore两个参数，第一个要插入的节点，第二个参照节点
+    box.removeChild(pointer);
+    for(var i = 0; i<10;i++){
+        var newSpan = span.cloneNode(true);
+        box.appendChild(newSpan);
+    }
+</script>
+</body>
+</html>

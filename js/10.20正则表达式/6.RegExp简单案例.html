@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //检测手机号的正则表达式
+    var boo = /^1[5834]\d{9}$/.test('12345678901');
+    //检测QQ号的正则表达式
+//    boo = /^[^0\d]{5,12}$/.test('121313');
+    //校验邮箱的正则表达式  xx@ssas.com
+    boo = /\w{6,16}@\w{2,15}(\.)[a-zA-Z]{2,8}/.test('as2d21@asd123asda.com');
+    console.log(boo);
+
+</script>
+</body>
+</html>

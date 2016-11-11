@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//Math 数值 整形int 浮点型float 科学计数 十六进制
+//数值运算 + - * / %
+    var i;
+    i = Math.pow(2,3);  //pow乘方
+    i = Math.abs(-1);  //绝对值
+    i = Math.round(5.4);//四舍五入
+    i = Math.ceil(5.4);  //向上取整
+    i = Math.floor(5.4); //向下取整
+    i = Math.max(1,10);  //取最大值
+    i = Math.max(1,5,10);
+    i = Math.min(1,10);  //取最小值
+    i = Math.min(1,5,10);
+    i = Math.random(); // [0，1)之间伪随机数可能等于0，但是一定小于1
+    i = Math.sin(0);  //正弦
+    i = Math.cos(0);  //余弦
+    i = Math.sqrt(4); //平方根
+//    i = Math.log(100); //自然对数
+//    i = Math.exp();   //e的指数
+   //常量
+    i = Math.PI;
+    console.log(i);
+    //有圆半径为10，计算周长和面积
+    var length = 2 *Math.PI * 10;
+    var area = Math.PI * Math.pow(10,2);
+    console.log("周长是:",length.toFixed(0));
+    console.log("面积是:",area.toFixed(0));
+
+    console.log(isNaN("a"));//isNaN 是否非数字
+</script>
+</body>
+</html>

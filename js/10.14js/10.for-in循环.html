@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //for-in循环是用于遍历对象
+    var person = {  //定义person对象
+        name:'Katy',
+        age:20
+    }
+
+    for(var i in person){
+        console.log(i +":"+person[i]);//访问对象的属性值 person.name 或者person[name]
+    }
+
+    //BOM浏览器对象 window
+    for(var i in window){
+        console.log(i + ":"+window[i]);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script>
+    var person = {
+        name:'Jack',
+        age:20
+    }
+    //构造函数
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    var xiaoming = new Person('小明',19); //通过new操作符调用构造函数 创建对象****
+    console.log(xiaoming.name + xiaoming.age);
+
+    delete person.age;//delete删除对象的属性
+    console.log(person.age); //undefined
+    console.log(xiaoming instanceof Person);//true instanceof用于判断对象是否为类的实例
+</script>
+</body>
+</html>

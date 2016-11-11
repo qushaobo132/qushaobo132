@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function Person(){  //Person的构造函数
+
+    }
+    function add(){}  //函数
+    console.log(typeof "1"); //string
+    console.log(typeof true); //boolean
+    console.log(typeof 1);  //number
+    console.log(typeof []); //object
+    console.log(typeof {}); //object
+    console.log(typeof new Date()); //object
+    console.log(typeof new Person());//object
+    console.log(typeof add);  //function
+    console.log(typeof undefined);//undefined
+    console.log(typeof null); //object null表示对象为空
+    /**
+     * 结论：typeof可以识别标准类型，null除外
+     *       不能识别具体的对象类型，但是函数function除外
+     */
+</script>
+</body>
+</html>

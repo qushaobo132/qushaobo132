@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script>
+//创建原型队形
+	var landRover ={
+		name:'LangRover',
+		start:function(){
+			console.log("%s is start...",this.logo);//%s 字符串占位符
+		},
+		stop:function(){
+			console.log("%s is stop...",this.logo);
+		},
+		run:function(){
+			console.log("%s is running...",this.logo);
+		}
+	}
+//通过原型对象创建对象
+		var landWind=Object.create(landRover);
+		landWind.logo='landWind';
+		landWind.run();
+</script>
+</body>
+</html>

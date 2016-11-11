@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function(){
+            var div = document.createElement("div");
+            document.body.appendChild(div);
+            var h3 = document.createElement("h3");
+            div.appendChild(h3);
+            var p = document.createElement("p");
+            div.appendChild(p);
+            var a = document.createElement("a");
+            h3.appendChild(a);
+            a.innerHTML = "乔丹";
+            a.setAttribute("href","#");
+            var nba = document.createTextNode("NBA");
+            p.appendChild(nba);
+            var em = document.createElement("em");
+            p.appendChild(em);
+            em.innerHTML = "最伟大";
+            var great = document.createTextNode("的球员");
+            p.appendChild(great);
+            /**
+             * createTextNode创建文本节点
+             */
+        }
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

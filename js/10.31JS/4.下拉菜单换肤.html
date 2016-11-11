@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	</style>
+	<script>
+	window.onload=function(){
+		var colors =document.getElementById("color");
+		var themes=document.getElementById("theme");
+		document.body.style.backgroundColor=colors.value;
+		colors.onchange=function(){
+				document.body.style.backgroundColor=colors.value;
+			}
+		}
+		document.body.style.backgroundImage="url(1.png)";
+		themes.onchange=function(){
+			switch(themes.value){
+				case 'world':
+				document.body.style.backgroundImage="url(1.png)";
+				break;
+				case 'city':
+				document.body.style.backgroundImage="url(2.png)";
+				break;
+				case 'cartoon':
+				document.body.style.backgroundImage="url(3.png)";
+				break;
+				case 'nba':
+				document.body.style.backgroundImage="url(4.png)";
+				break;
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+<select id="color">
+	<option value="green">绿</option>
+	<option value="pink">粉</option>
+	<option value="blue">蓝</option>
+	<option value="red">红</option>
+</select>
+<select id="theme">
+	<option value="world">世界名胜</option>
+	<option value="city">城市风景</option>
+	<option value="cartoon">卡通动漫</option>
+	<option value="nba">NBA球星</option>
+</select>
+</body>
+</html>

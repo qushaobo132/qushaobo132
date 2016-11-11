@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function Person(){
+
+    }
+    function add(){}
+    console.log("1" instanceof String);  //false
+    console.log(1 instanceof  Number); //false
+    console.log(true instanceof Boolean);//false
+    console.log(new Date() instanceof Date);  //true
+    console.log([] instanceof Array);  //true
+    console.log(new Person() instanceof  Person);//true
+    console.log(add instanceof  Function);  //true
+
+    /**
+     * 结论：instanceof不能判别原始类型，可以判别内置对象类型
+     *      可以判别自定义的对象类型
+     */
+</script>
+</body>
+</html>

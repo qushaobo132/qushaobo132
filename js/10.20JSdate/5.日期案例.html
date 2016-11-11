@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #time{
+            width: 1200px;
+            height: 40px;
+            font-size: 36px;
+            color: orange;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="time" value="time"/>
+<script>
+    function padding(num){
+        return num <10?"0"+num:''+num;
+    }
+    //给毫秒补零的函数
+    function padding4ms(num) { // 2 to  4 for
+        if (num < 10) {
+            return "00" + num;
+        } else if (num>=10 && num <100){
+            return "0" + num;
+        }else{
+            return '' + num;
+        }
+    }
+    setInterval(function () {  //定时器
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var dayOfMonth = date.getDate();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        var ms = date.getMilliseconds();
+        var day = date.getDay();
+        var week = ['一','二','三','四','五','六','日'];//查表法
+        var time = "现在时间是"+year +"年"+padding(month) +"月"+padding(dayOfMonth)+"日"+
+                padding(hour)+"时"+padding(min)+"分" +padding(sec)+"秒" +padding4ms(ms)+"毫秒"+"星期"+week[day-1];
+        console.log(padding4ms(ms));
+        //获取input输入框对象
+        var inputObj = document.getElementById("time");
+        //给input对象的value属性赋值
+        inputObj.value = time;
+    },70);//定时器
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .w{
+            width:600px;
+            height:550px;
+            margin:0 auto;
+            position: relative;
+        }
+        #clock{
+            background:url(images/clock.jpg) no-repeat center;;
+        }
+        #hour{
+            background:url(images/hour.png) no-repeat center;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        #minute{
+            background:url(images/minute.png) no-repeat center;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        #second{
+            background:url(images/second.png) no-repeat center;
+        }
+    </style>
+</head>
+<body>
+    <div class="w" id="clock">
+        <div class="w" id="hour"></div>
+        <div class="w" id="minute"></div>
+        <div class="w" id="second"></div>
+    </div>
+    <script>
+        var clock = document.getElementById('clock');
+        var divs = clock.children;
+        setInterval(function(){
+            var date =new Date();
+            var ms = 0,s= 0,m= 0,h=0;
+            ms = date.getMilliseconds();//当前毫秒值
+            s = date.getSeconds() + ms/1000;
+            m = date.getMinutes() + s/60;
+            h = date.getHours() + m/60;
+            divs[2].style.webkitTransform = 'rotate('+s*6+'deg)';
+            divs[1].style.webkitTransform = 'rotate('+m*6+'deg)';
+            divs[0].style.webkitTransform = 'rotate('+h*30+'deg)';
+        });
+    </script>
+</body>
+</html>

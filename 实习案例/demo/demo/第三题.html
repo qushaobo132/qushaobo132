@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第三题</title>
+	<style>
+	.slide{
+		position:relative;width:200px;
+		height:100px;border:1px solid blue;
+		background:blue;
+	}
+	.slide .pointer{
+		position:absolute;bottom:10px;
+		right:10px;line-height:10px;
+	}
+	.slide .pointer i{
+		display:inline-block;width:10px;
+		margin:auto 5px;height:10px;
+		border-radius:10px;
+		background-color:black;
+	}
+	.slide .pointer i.current{
+		background-color:white;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="slide">
+	<div class="pointer"><i class="current"></i><i></i><i></i></div>
+</div>
+</body>
+</html>

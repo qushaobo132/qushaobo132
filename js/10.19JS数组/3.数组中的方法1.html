@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var color = ['red','green','blue','yellow'];
+    console.log(color.indexOf('pink'));  //找元素对应的数组索引值(角标)，元素不存在返回-1
+    console.log('toString()',color.toString());  //将数组转为字符串
+    var str = color.join("-");
+    console.log(str);
+    color.reverse(); //反转
+    console.log(color.toString());
+    //需求：给每个学生的成绩加5分
+    color.forEach(function(i){   // 遍历数组，参数是回调函数
+        console.log(i);
+    });
+
+    var students = [
+        {id:1,score:60},
+        {id:2,score:70},
+        {id:3,score:80},
+        {id:4,score:55}
+    ]
+    //增加学生的成绩 +5
+    function addScore(item){ //var addScore = function(){}
+        item.score +=5;
+    }
+    students.forEach(addScore);
+
+    for(var i in students){     //遍历students数组
+        console.log(students[i].score);
+    }
+
+    //sort方法演示
+    var nums = [33,24,3,18,30];
+    nums.sort(function(a,b) {  //sort()方法不传参数 会以字典顺序排序
+        return a - b;
+    });
+    console.log(nums.toString());
+
+    //需求：以成绩排序
+    var sortByScore = function (s1,s2) {
+        return s2.score - s1.score;
+    }
+    students.sort(sortByScore);  //按学生成绩排序
+    students.forEach(function (item) {
+        console.log("排序后的学生成绩：",item.score);
+    });
+
+
+</script>
+</body>
+</html>

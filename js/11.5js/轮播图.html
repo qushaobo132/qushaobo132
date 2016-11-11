@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 490px;
+            height: 170px;
+            margin: 100px auto;
+            border: 1px solid #dddddd;
+            position: relative;
+        }
+        .box .slide {;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide ul{
+            width: 1000%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .slide ul li{
+            float: left;
+        }
+        .box ol .cur{
+            background: #00ff00;
+        }
+        .box ol{
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
+            left: 200px;
+        }
+        .box ol li{
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin-left: 5px;
+            background: #fff;
+            text-align: center;
+            line-height: 20px;
+            cursor:pointer;
+        }
+        .btn{
+            border:1px solid #fff;
+            width: 30px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, .3);
+            position: absolute;
+            top: 50%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            margin-top: -25px;
+            display: none;
+            cursor: pointer;
+        }
+        .box:hover .btn{
+            display: block;
+        }
+        .btn:hover{
+            background-color: rgba(0, 0, 0, .6);
+        }
+        .left{
+            left:0;
+        }
+        .right{
+            right:0;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="scr">
+    <div class="slide">
+        <ul>
+            <li><img src="images/01 (2).jpg" alt=""/></li>
+            <li><img src="images/02 (2).jpg" alt=""/></li>
+            <li><img src="images/03 (2).jpg" alt=""/></li>
+            <li><img src="images/04 (2).jpg" alt=""/></li>
+            <li><img src="images/05.jpg" alt=""/></li>
+        </ul>
+    </div>
+    <ol>
+        <li class="cur">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+    <div class="btn left" id="left">&lt;</div>
+    <div class="btn right" id="right">&gt;</div>
+</div>
+</body>
+<script>
+    function $ (id){
+        return document.getElementById(id);
+    }
+    var ul = $('scr').children[0].children[0];
+    var ol = $('scr').children[1];
+    var lis = ol.children;
+    var start = 0,target=0;
+    for(var i =0;i<lis.length;i++){
+        lis[i].index = i;
+        lis[i].onmouseover = function(){
+            for(var j=0;j<lis.length;j++){
+                lis[j].className = '';
+            }
+            this.className = 'cur';
+            target = -this.index*490;
+            }
+            var curIndex;
+            $("left").onclick = function(){
+                target ==0 ? target = -1960 : target +=490;
+                curIndex = target/-490;
+                for(x =0;x<lis.length;x++){
+                    lis[x].className = "";
+                }
+                lis[curIndex].className = "cur";
+        }
+        $("right").onclick = function(){
+            target == -1960 ? target = 0 : target -=490;
+            curIndex = target/-490;
+            for(x =0;x<lis.length;x++){
+                lis[x].className = "";
+            }
+            lis[curIndex].className = "cur";
+        }
+    }
+    var timer = null;
+    timer = setInterval(function(){
+        $("right").onclick();
+    },2000);
+    $("scr").onmousemove = function(){
+        clearInterval(timer);
+    }
+    $("scr").onmouseout = function(){
+        timer = setInterval(function(){
+            $("right").onclick();
+        },2000);
+    }
+    setInterval(function(){
+        start =start + (target-start)/10;
+        ul.style.left = start + 'px';
+    },60)
+</script>
+</html>

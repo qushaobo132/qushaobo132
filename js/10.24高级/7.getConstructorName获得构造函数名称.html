@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /**
+     * 获得构造函数名称，如果是undefined和null返回它们本身
+     * @param obj
+     */
+    function getConstructorName(obj){
+        return (obj === undefined | obj === null)?obj:
+                (obj.constructor && obj.constructor.toString()
+                        .match(/function\s*([^(]*)/)[1]);
+    }
+    var obj = undefined;
+    obj = new String("1");
+    obj = new Boolean(true);
+    function Person(){}
+//    obj = new Person();
+    console.log(getConstructorName(obj));
+</script>
+</body>
+</html>

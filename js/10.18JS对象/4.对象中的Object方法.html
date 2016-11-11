@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var car = {
+        brand:'lexus',
+        color:'white'
+    }
+    //新增car对象的toString()方法
+    car.toString = function toString(){
+        console.log("汽车的品牌是"+car.brand+",颜色是："+car.color);
+    }
+    car.toString();  //可以判断数据类型
+
+    //valueOf()获取对象的原始值
+    var num = new Number(123);
+    console.log(num.valueOf());
+    console.log(car.valueOf());
+    console.log(car.hasOwnProperty('color'));//判断对象的属性是否由继承得来
+</script>
+</body>
+</html>

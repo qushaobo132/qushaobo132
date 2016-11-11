@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹性伸缩的展示器</title>
+	<style>
+		    .container {
+      width: 400px;
+      margin: 0 auto;
+    }
+    
+    .wrap {
+      position: relative;
+      box-sizing: border-box;
+      float: left;
+      overflow: visible;
+      width: 200px;
+      height: 250px;
+    }
+    
+    .wrap:nth-child(1),
+    .wrap:nth-child(2) {
+      z-index: 2;
+    }
+    
+    .wrap:nth-child(3),
+    .wrap:nth-child(4) {
+      z-index: 1;
+    }
+    
+    .inner {
+      position: absolute;
+      height: 240px;
+      width: 90%;
+      background: #fff;
+      border: 1px solid #B3B3B3;
+      transition: all 0.3s ease;
+    }
+    
+    .inner:hover {
+      height: 300px;
+    }
+    
+    .inner:hover .desc {
+      height: 50px;
+      opacity: 1;
+    }
+    
+    h1 {
+      font-size: 18px;
+    }
+    
+    p {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    
+    .wrap-content {
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    
+    .wrap-content div {
+      float: left;
+      width: 50%;
+    }
+    
+    .desc {
+      overflow: hidden;
+      opacity: 0;
+      height: 0;
+      transition: all .3s ease;
+    }
+    
+    .lf p:nth-child(1),
+    .rf p:nth-child(2) {
+      display: none;
+    }
+    
+    .inner:hover .lf p:nth-child(1),
+    .inner:hover .rf p:nth-child(2) {
+      display: block;
+    }
+	</style>
+</head>
+<body>
+	<div class="container">
+  <div class="wrap">
+    <div class="inner">
+      <div class="img"><img src="http://o9zpgjn2s.bkt.clouddn.com/ac345982b2b7d0a2284d772bcdef76094a369afb.jpg" height="113px"></div>
+      <div class="wrap-content">
+        <h1>我看见你了</h1>
+        <p class="desc">在马路边捡到一分钱，这要上交给police叔叔手里边 ，这是原则。</p>
+        <div class="lf">
+          <p>test1</p>
+          <p>test2</p>
+        </div>
+        <div class="rf">
+          <p>test3</p>
+          <p>test4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="inner">
+      <div class="img"><img src="http://o9zpgjn2s.bkt.clouddn.com/ac345982b2b7d0a2284d772bcdef76094a369afb.jpg" height="113px"></div>
+      <div class="wrap-content">
+        <h1>我看见你了</h1>
+        <p class="desc">在马路边捡到一分钱，这要上交给police叔叔手里边 ，这是原则。</p>
+        <div class="lf">
+          <p>test1</p>
+          <p>test2</p>
+        </div>
+        <div class="rf">
+          <p>test3</p>
+          <p>test4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="inner">
+      <div class="img"><img src="http://o9zpgjn2s.bkt.clouddn.com/ac345982b2b7d0a2284d772bcdef76094a369afb.jpg" height="113px"></div>
+      <div class="wrap-content">
+        <h1>我看见你了</h1>
+        <p class="desc">在马路边捡到一分钱，这要上交给police叔叔手里边 ，这是原则。</p>
+        <div class="lf">
+          <p>test1</p>
+          <p>test2</p>
+        </div>
+        <div class="rf">
+          <p>test3</p>
+          <p>test4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="inner">
+      <div class="img"><img src="http://o9zpgjn2s.bkt.clouddn.com/ac345982b2b7d0a2284d772bcdef76094a369afb.jpg" height="113px"></div>
+      <div class="wrap-content">
+        <h1>我看见你了</h1>
+        <p class="desc">在马路边捡到一分钱，这要上交给police叔叔手里边 ，这是原则。</p>
+        <div class="lf">
+          <p>test1</p>
+          <p>test2</p>
+        </div>
+        <div class="rf">
+          <p>test3</p>
+          <p>test4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

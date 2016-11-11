@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>复习表单资料</title>
+	</head>
+	<boby>
+	<form action="/login" method="post">
+		<fieldset>
+			<legend>基本信息</legend>
+			<label for="username">用户名:</label>
+			 <input type="text" id="username" name="username"required pattern="\d[a-z]" placeholder="请输入6_16位数字字母和下划线"/><br>
+
+			<label for="password">密码：</label>
+			<input type="password" id="password" name="password" checked="true"/><br>
+			<label for="emall">邮箱：</label>
+			<input type="emall" id="emall" name="emall" checked="true"/><br>
+			<label for="tel">电话：</label>
+			<input type="tel" id="tel" name="tel" checked="true"/><br>
+			<label for="rangen">推拉杆</label>
+			<input type="range" id="range" name="range"/><br>
+			<label for="color">颜色：</label>
+			<input type="color" id="color" name="color"/><br>
+		</fieldset>
+		<fieldset>
+			<legend>个人资料</legend>
+			<label for="date">生日：</label>
+			<input type="date" id="date" name="date"/><br>
+			<label for="gender">性别：</label>
+			<input type="radio" id="gender" name="gender" checked/>男
+			<input type="radio" id="gender" name="gender" />女<br>
+		爱好：<input type="checkbox" name="like" 
+		      checked/>上网
+		      <input type="checkbox" name="like" checked/>冲浪
+		      <input type="checkbox" name="like" disabled/>喝酒<br>
+		地区：<select>
+		        <optgroup label="山西">
+		        	<option>晋城</option>
+		        	<option selected>长治</option>
+		        	<option>高平</option>
+		        </optgroup>	
+		        <optgroup label="山东">
+		        	<option>济南</option>
+		        	<option>淄博</option>
+		        	<option>烟台</option>
+		        </optgroup>
+		      </select> <br>     	
+		</fieldset>
+		<fieldset>
+			<legend>头像</legend>
+		头像；<input type="file"/>	
+		</fieldset>
+		<button>注册</button>
+		<button type="reset">重置</button>
+	</form>
+	</boby>
+	</html>

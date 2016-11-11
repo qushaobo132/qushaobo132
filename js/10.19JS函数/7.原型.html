@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //构造函数提供了创建对象的方式，原型是对构造函数的扩展
+    function Point(x,y){
+        this.x = x;
+        this.y = y;
+    }
+    Point.prototype.move = function(moveX,moveY){
+        this.x += moveX;
+        this.y += moveY;
+    }
+    var point = new Point(1,2);
+    point.move(2,3);
+    console.log(point.x +","+point.y);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    var str = "a s d 2 0 1 6";
+    console.log(str.match(/\d/));//匹配
+    console.log(str.search(/[\d]/));//搜索正则表达式匹配的字符串
+    console.log(str.replace(/\d/g,'xxx'));
+    console.log(str.split(/\s/));  //按照正则表达式的规则切割
+
+    var ad = '西红柿的价格是5,黄瓜的价格10';  //￥5.00
+    ad = ad.replace(/(\d+)/g,'￥5.00');
+    console.log(ad);
+
+</script>
+</body>
+</html>

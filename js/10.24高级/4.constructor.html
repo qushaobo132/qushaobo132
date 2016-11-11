@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //constructor识别标准类型
+    console.log("1".constructor);
+    console.log(true.constructor);
+    console.log(Number(1).constructor);
+//    console.log(undefined.constructor);
+//    console.log(null.constructor);
+    console.log(new Object().constructor);
+    console.log(new Date().constructor);
+    console.log(new Array().constructor);
+    console.log(new Function().constructor);
+    //自定义的对象类型
+    function Person(){
+            console.log("Person");
+    }
+    console.log(new Person().constructor);
+
+    /**
+     * 结论：constructor可以判别标准类型，(undefined/null除外),
+     *      可以判别内置对象类型，判别自定义对象类型
+     */
+</script>
+</body>
+</html>

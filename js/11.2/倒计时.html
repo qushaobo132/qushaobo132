@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #time{
+            width:1000px;
+            height:30px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="time"></div>
+    <script>
+        var time = document.getElementById("time");
+        var endTime = new Date("2016/11/11");
+        function padding(num){
+            return num <10?"0"+num:num;
+        }
+        setInterval(function(){
+            var now = new Date();
+            var reverseTime = (endTime.getTime() - now.getTime())/1000;
+            var s = parseInt(reverseTime%60);
+            var m = parseInt(reverseTime/60 % 60);
+            var h = parseInt(reverseTime/3600 % 24);
+            var d = parseInt(reverseTime/3600 / 24);
+            time.innerHTML = "距离双11狂欢节还有："+padding(d)+"天"+padding(h)+"小时"+padding(m)+"分"+padding(s)+"秒";
+        },100);
+    </script>
+</body>
+</html>

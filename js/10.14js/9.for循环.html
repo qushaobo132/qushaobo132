@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //输出0-100之间所有的数
+    for(var i=0;i<100;i+=2){
+//        if(i % 2==0) //输出偶数
+            console.log(i);
+    }
+
+    //求0-100之间所有数的和 所有偶/奇数的和
+    var sum = 0;
+    for(var i =0;i<100;i++){
+        sum += i;
+    }
+    console.log(sum);
+
+    //使用for循环打印一个 5 *5 矩形
+    for(var x = 0; x<5;x++){
+        for(var y = 0; y<5;y++){
+            document.write('*');
+        }
+        document.write("<br>");
+    }
+
+    /*
+      *
+      * *
+      * * *
+      * * * *
+      * * * * *
+
+      * * * * *
+      * * * *
+      * * *
+      * *
+      *
+
+     */
+
+</script>
+</body>
+</html>

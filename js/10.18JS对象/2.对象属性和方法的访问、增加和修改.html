@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var car = new Object(); //通过构造函数的方式来创建对象
+    var car = {  //直接定义对象字面量来创建对象(最常用)
+        brand:'QQ',        //属性
+        color:'red',
+        start:function(){  //方法
+            console.log("汽车启动...");
+        }
+    };
+    //访问对象的属性和方法
+    console.log("汽车的品牌："+car.brand);
+    console.log("汽车的颜色"+ car['color']);
+    car.start();
+    //增加对象的属性和方法
+    car.km = 30000;
+    console.log("汽车行驶公里数:",car.km);
+    car.stop = function(){
+        console.log("汽车停止...")
+    }
+    car.stop();
+
+    //修改对象的属性和方法
+    car.color = 'yellow';
+    console.log("汽车新的颜色",car.color);
+    car.start = function(){
+        console.log("汽车发动...");
+    }
+    car.start();
+
+    //删除对象的属性和方法 delete
+    delete car.km;
+    console.log("汽车行驶公里数:",car.km); //undefined
+    //    delete car.start;  //删除对象的方法
+    //    car.start();
+</script>
+</body>
+</html>

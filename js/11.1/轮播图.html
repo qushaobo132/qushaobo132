@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 590px;
+            height: 340px;
+            border: 1px dashed #00FFFF;
+            margin: 100px auto;
+            overflow: hidden;
+            position: relative;
+
+        }
+        img{
+            width: 590px;
+            height: 340px;
+        }
+        .btn{
+            width: 30px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, .1);
+            position: absolute;
+            top: 50%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            margin-top: -25px;
+            display: none;
+            cursor: pointer;
+        }
+        .prev{
+            left:0;
+        }
+        .next{
+            right: 0;
+        }
+        .box:hover .btn{
+            display: block;
+        }
+        .btn:hover{
+            background-color: rgba(0, 0, 0, .6);
+        }
+        .pointer{
+            width: 160px;
+            height: 18px;
+            position: absolute;
+            left: 40px;
+            bottom: 30px;
+            z-index: 1;
+        }
+        .pointer i{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        .pointer .cur{
+            background-color: red;
+        }
+        .show{
+            position:absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            //根据图片个动态数创建圆点
+            var box = document.getElementById('box');
+            var lis = box.getElementsByTagName('li');
+//            创建节点
+            var pointer = document.createElement('div');//pointer是一个div元素节点
+            //节点对象设置属性 常使用setAttribute ，获得属性 getAttribute
+//            pointer.className = "pointer";//class="pointer"
+            pointer.setAttribute('class','pointer');
+//            添加节点    appendChild向元素末尾添加节点
+            //将pointer追加到box末尾
+            box.appendChild(pointer);
+            //根据图片个数来添加i
+            for(var i = 0;i<lis.length;i++){
+                //创建i元素
+                var mi = document.createElement('i');
+                pointer.appendChild(mi);
+            }
+            //给首个i设置cur类，拿到一个元素的子节点，使用children
+            var is = pointer.children;
+            is[0].setAttribute('class','cur');
+            for(var i=0;i<is.length;i++){
+                is[i].index = i;
+                is[i].onmouseover = function(){
+                    for(var j = 0;j<is.length;j++){
+                        is[j].className = '';
+                        lis[j].className = '';
+                    }
+                    this.className = 'cur';
+                    lis[this.index].className = 'show';
+                };
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="silder">
+        <ul>
+            <li><a href="#"><img src="image/1.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="image/2.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="image/3.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="image/4.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="image/5.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="image/6.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="image/7.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="image/8.jpg" alt=""/></a></li>
+            <div class="btn prev">&lt;</div>
+            <div class="btn next">&gt;</div>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var boo = /^http/.test("xhttp://www.baidu.com"); //false
+    boo = /\.jpg$/.test("lol.jpg"); //true
+    boo = /\bis\b/.test('this');  //false is必须以单个单词存在
+    boo = /^13588888888$/.test('a13588888888b'); //false
+    console.log(boo);
+</script>
+</body>
+</html>

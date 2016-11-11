@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第五题</title>
+    <style>
+    *{
+        margin:0;padding:0;
+    }
+    body{
+        height:1000px;
+    }
+    .outside{
+        position:fixed;
+        border:1px solid white;
+        top:40%;left: 40%;
+
+        margin:auto;height:220px;width:300px;
+    }
+    .container{
+        width:260px;border:1px solid #ccc;
+        border: 1px solid #ccc;
+        position:relative;
+        margin:0 20;
+    }
+    .title{
+        height:40px;
+        background-color:#eee;
+        position:relative;
+    }
+    .title p{
+        margin:0 20px;font-size:14px;
+        line-height:40px;
+        overflow:hidden; 
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    .img{
+        width:10px;height:10px;
+        position:absolute;
+        top:10px;right:10px;
+        cursor:pointer;
+        background:url(x.jpg) no-repeat;
+    }
+    .content{
+        background-color:#fff;
+        height:80px;
+    }
+    .content p{
+        margin:20px;font:12px/1.5 "宋体";
+        overflow:hidden; 
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    .sample{
+        width:80px;height:30px;
+        margin:0 auto;
+        display:block;
+        text-align:center;
+        color:#fff;
+        line-height:30px;
+        background-color:blue;
+        border-radius:5px;
+        margin-bottom:20px;
+    }
+    a{
+        text-decoration:none;
+    }
+    </style>
+</head>
+<body>
+<div class="outside">
+    <div class="container">
+        <div class="title">
+            <p>标题栏标题栏标题栏标题栏标题栏标题栏标题栏标题栏</p>
+            <div class="img"></div>
+    </div>
+    <div class="content">
+        <p>内容区段落内容区段落内容区段落内容区段落内容区段落内容区段落内容区段落内容区段落内容区段落内容区段落内容区段落</p>
+          <button class="sample"><a href="#">确定</a></button>
+    </div>
+</div>
+
+</body>
+</html>

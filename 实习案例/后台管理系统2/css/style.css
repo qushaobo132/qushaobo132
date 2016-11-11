@@ -1,0 +1,16 @@
+.main{
+	position:absolute;
+	top:50px;left:0;
+	width:100%;
+}
+.table th,td{
+	font-size: 12px;
+	text-align: center;
+}
+.sidebar,.content{
+	border:1px solid #ccc;
+	border-radius:5px;
+}
+.content{
+	margin-left: -1px;
+}

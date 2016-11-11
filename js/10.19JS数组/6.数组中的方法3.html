@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var nums = [33,24,3,18,30];
+    var newNums = nums.slice(0,2);  //截取数组的一部分，包含头，不包含尾 不改变原数组
+    newNums = nums.slice(0);   //将复制原数组
+    console.log(newNums.toString());
+
+    var nums2 = [96,23,35,84,26];
+    var numsx = nums.concat(nums2); //连接两个数组，拼接数组
+    console.log(numsx.toString());
+
+    var scores = [60,70,80,90];
+    var newScores = [];
+    //定义加分的回调函数
+//    function addScores(item){
+//        newScores.push(item+5);
+//    }
+//    scores.forEach(addScores);
+//    console.log(newScores);
+
+    //使用map方法操作加分
+    //map方法对数组的所有成员依次调用一个函数，根据函数结果返回一个新数组。
+    function addScore(item,index,array){
+        return item+5;
+    }
+    newScores = scores.map(addScore);  //map返回新的数组
+    console.log(newScores);
+
+    //reduce 累加
+    function getSum(preResult,item){//preResult累积变量
+        return preResult+item;
+    }
+    var sum = scores.reduce(getSum,0);
+    console.log(sum);
+
+    /**
+     * 累加的思想
+     * var sum = 0;
+     * var i = 0;
+     * for(var i =0;i<arr.length;i++){
+     *      sum += i;
+     * }
+     * console.log(sum);
+     */
+
+</script>
+</body>
+</html>

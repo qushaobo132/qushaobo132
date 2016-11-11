@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>翻书效果</title>
+	<style>
+		.wrap {
+			  transform-style: preserve-3d;
+			  width: 150px;
+			  height: 200px;
+			  background-color: #7F7F7F;
+			  border-radius: 10px;
+			  /* 为了居中 */
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  margin-left: -75px;
+			  margin-top: -100px;
+			}
+
+			.book {
+			  transform-origin: 0 0;
+			  transition: all .6s linear;
+			  border-radius: 10px;
+			  background-image: url('http://o9zpgjn2s.bkt.clouddn.com/ac345982b2b7d0a2284d772bcdef76094a369afb.jpg');
+			  background-size: cover;
+			  background-position: -80px;
+			  width: 150px;
+			  height: 200px;
+			}
+			.wrap:hover .book {
+			  transform: scaleX(0.95);
+			}
+	</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="book"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script>
+    //使用prototype设置原型 ，prototype是构造函数的属性
+    function Car(logo){
+    	this.logo=logo;
+    }
+    Car.prototype={
+    	start:function(){
+    		console.log("%s start...",this.logo);
+    	},
+    	stop:function(){
+    		console.log("%s stop..",this.logo);
+    	}
+    }
+    var qq = new Car("qq");//使用New构造函数创建对象
+    qq.start();
+</script>
+</body>
+</html>

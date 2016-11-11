@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //定义一个构造函数(首字母大写)
+    function Point(x,y){
+        this.x = x;
+        this.y = y;
+        this.move = function(moveX,moveY){
+            this.x += moveX;
+            this.y += moveY;
+        }
+    }
+
+    //用构造函数创建对象
+    var p = new Point(3,2);
+    p.move(1,1);
+    console.log(p.x + ","+p.y);
+
+</script>
+</body>
+</html>

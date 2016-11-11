@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab切换</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .notice{
+            width: 572px;
+            height: 198px;
+            margin: 10px;
+            border: 1px solid #999;
+            overflow: hidden;
+            font-size: 14px;
+        }
+        .title{
+            height: 58px;
+            background-color: #f1f1f1;
+        }
+        .title ul{
+            width: 100%;
+            overflow: hidden;
+        }
+        .title li{
+            float: left;
+            width: 190px;
+            height: 57px;
+            text-align: center;
+            line-height: 57px;
+            overflow: hidden;
+            border-right: 1px solid #cecece; 
+            border-bottom: 1px solid #cecece;
+        }
+        .title .hov{
+            background-color: #fff;
+            border-bottom: 1px solid #fff; 
+        }
+        .title ul li{
+            border-right:none; 
+        }
+        .title li a{
+            text-decoration: none;
+            color: black;
+        }
+        .title li a:hover{
+            color:yellow;
+        }
+        .content p{
+            margin: 20px;
+        }
+        .content>.p1,.p3{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="notice">
+        <div class="title">
+            <ul>
+                <li><a href="#">课程</a></li>
+                <li class="hov"><a href="#">学习计划</a></li>
+                <li><a href="#">技能图谱</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <p class="p1">课程内容</p>
+            <p class="p2">学习计划内容</p>
+            <p class="p3">技能图谱内容</p>
+        </div>
+    </div>
+</body>
+</html>

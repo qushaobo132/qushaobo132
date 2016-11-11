@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>栈、队列是一种数据结构</title>
+</head>
+<body>
+<script>
+    /**
+     * 数据结构：栈 队列
+     * 什么是栈: 先进后出
+     * 什么是队列: 先进先出
+     */
+    //数组中和数据结构相关的方法
+    var heros = ["xdl","bn","dlw"];
+    //push向数组末尾增加元素，可以放多个参数
+    heros[heros.length] = "js";
+    heros.push("vn");
+    heros.push("rw","gh");
+    //向数组首添加元素，可以放多个参数
+    heros.unshift("ps","dm");
+    console.log(heros.toString());
+    //获取最后一个元素，并删除
+    var hero = heros.pop();
+    console.log("删除了末尾一个元素："+hero);
+    //获取第一个元素，并删除
+    var hero2 = heros.shift();
+    console.log("删除了首位一个元素："+hero2);
+    console.log(heros.toString());
+
+    //push pop 组合使用可以实现栈的数据结构
+    //push shift 组合使用可以实现队列的数据结构
+    //unshift pop 组合使用可以实现队列的数据结构
+    //unshift shift组合使用可以实现栈的数据结构
+
+    //splice方法，在任意位置增加或者删除元素
+    heros.splice(1,2);  //在索引为1的位置，删除2个元素
+    console.log(heros.toString());
+    heros.splice(1,2,"jin");//在索引为1的位置，增加元素，第二参数为0表示不删除原来的元素，
+                            // 如果不为0则表示修改
+    console.log(heros.toString());
+</script>
+</body>
+</html>

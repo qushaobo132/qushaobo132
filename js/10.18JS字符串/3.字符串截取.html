@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str = "hello world";
+    str = str.substring(2);
+    str = str.substring(0,7);  //包含头，不包含尾 hello w
+    console.log(str);
+
+    var str1 = "Forrest Gump";
+    str1 = str1.slice(2);
+    console.log(str1);
+    str1 = str1.slice(0,7);  //包含头，不包含尾
+    console.log(str1);
+    str1 = str1.slice(0,-1); //slice方法可以使用负数，表示倒数第几个
+    console.log(str1);
+
+    var str2 = "Matrix Revolution";
+    str2 = str2.substr(3);
+    console.log(str2);
+    str2 = str2.substr(1,8);  //第一参数是索引值，第二参数是长度
+    console.log(str2);
+   // str2 = str2.substr(1,-1);  //不支持负数参数
+    console.log(str2);
+
+</script>
+</body>
+</html>

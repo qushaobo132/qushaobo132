@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//    一个加油站为了鼓励车主多加油，所以加的多有优惠。
+//    93号汽油，每升6元；如果大于等于20升，那么每升5.9；
+//    97号汽油，每升7元；如果大于等于30升，那么每升6.95
+//    用户输入汽油编号，然后输入加多少升油，显示价格
+
+    //首先,获得用户输入
+    var gasoline = prompt("请输入汽油编号,有93 97两种"); //汽油编号
+    var volume = prompt("请输入您要加多少升油"); //汽油的容积
+    var price;
+    if(gasoline == "93"){
+        if(volume >=20){
+            price = 5.9;
+        }else{
+            price = 6;
+        }
+    }else if(gasoline == "97"){
+        if(volume >=30){
+            price = 6.95;
+        }else{
+            price = 7;
+        }
+    }else{
+        alert("对不起,本站没有这种汽油");
+    }
+    var money = price * volume; //最后总价格
+    alert("已加油,请付"+money+"块钱");
+</script>
+</body>
+</html>

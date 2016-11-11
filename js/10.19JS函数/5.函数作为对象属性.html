@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var point = {
+        x:1,
+        y:1,
+        move:function(moveX,moveY){
+            this.x += moveX;  //this指向当前对象的引用
+            this.y += moveY;
+        }
+    };
+    point.move(1,2);
+    console.log(point.x +','+point.y);
+</script>
+</body>
+</html>

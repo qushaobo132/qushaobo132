@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+	var a = 1,b =2;
+	if(!(a>b)){
+		console.log("if条件成立")
+	}
+	var obj = undefined;//null表示对象为空 undefined
+	if (!obj){
+		console.log("if条件成立")
+	}
+	//&& 与运算符 1true2 1false1
+	console.log(a && obj);
+	console.log(obj && a);
+	//||或运算符 1true1 1false1
+	console.log(a || obj);//1
+	console.log(obj || a);//1
+	</script>
+</body>
+</html>

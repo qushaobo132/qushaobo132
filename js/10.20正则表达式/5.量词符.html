@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var boo = /\d{3}/.test('2234'); //{n}表示恰好重复n次
+//    boo = /\d{1,5}/.test('123456'); //{n,m}表示重复不少于n次，不多于m次
+//    --------------以上有疑问
+    boo = /\d{3,}/.test('1245'); //{n,}表示至少重复n次
+
+    boo = /\d?/.test('as');  //?表示出现0次或1次 等同于等同于{0, 1}
+    boo = /\d*/.test('1234'); //*表示出现0次或多次，等同于{0,}
+    boo = /\d+/.test('asd1');   //+表示出现1次或多次，等同于{1,}
+    console.log(boo);
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /**
+     * toDate()函数，用于实现功能：传入参数，判断参数的不同类型，生成Date()对象
+     * 输入格式：
+     * '2015-08-05'
+     * 1438744815232  new Date()
+     * {y:2015,m:8,d:5}
+     * [2015,8,5]
+     * 返回格式：Date
+     * 请写出toDate()函数的实现代码
+     */
+    function toDate(param){
+        if(typeof param == 'string' || typeof param == 'number'){
+            return new Date(param);
+        }
+        if(param instanceof Array){
+            var date = new Date();
+            date.setFullYear(param[0]);
+            date.setMonth(param[1]-1);
+            date.setDate(param[2]);
+            return date;
+        }
+        if(typeof param == 'object'){
+            var date = new Date();
+            date.setFullYear(param.y);
+            date.setMonth(param.m - 1);
+            date.setDate(param.d);
+            return date;
+        }
+    }
+
+    //测试
+    var param = '2015-08-05';
+    param = 1438744815232;
+    param = {y:2015,m:8,d:5};
+    param = [2015,8,5];
+    var date = toDate(param);
+    console.log(date.toString());
+    console.log(date instanceof  Date);
+
+</script>
+</body>
+</html>

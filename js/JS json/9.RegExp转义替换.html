@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var html = '<label>密码：</label><input type="password">';
+    html = html.replace(/[<>]/g,function(m0){// < &lt; > &gt;
+        switch(m0){
+            case '<':
+                return '&lt;';
+            case '>':
+                return '&gt;';
+        }
+    });
+    console.log(html);
+</script>
+</body>
+</html>

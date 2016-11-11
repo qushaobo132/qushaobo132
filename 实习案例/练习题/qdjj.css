@@ -1,0 +1,116 @@
+*{
+	margin:0;padding:0;
+}
+/*主体*/
+body{
+	background-color: #0d7792;
+}
+/*图片logo*/
+.global{
+	margin:0 auto;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:710px;height:auto;
+	background-color:#fff;
+	border-radius:30px;
+}
+/*导航*/
+nav{
+	font-size: 12px;
+	float:right;
+	margin-right:30px;
+	margin-top:70px;
+}
+nav a{
+	color:#ff0099;
+	text-decoration: none;
+	margin-left:6px;
+}
+/*标题*/
+article h3{
+	color:#333;margin-left:280px;
+	margin-top:20px;
+}
+/*表单主体*/
+.reglnfo{
+	width:640px;height:auto;
+	margin-top: 18px;
+	margin-left:35px;
+	border:1px solid #ccc;
+}
+/*表单声明*/
+.state{
+	width:640px;height:60px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	font-size:12px;line-height: 20px;
+	color:#333;
+}
+.nifotitle{
+	width:640px;height:23px;
+	color:#0033AE;
+	font-weight: bold;
+	font-size: 12px;
+	float:left;
+	line-height: 23px;
+	background-color: #eee;
+}
+.infotitle h4{
+	margin-left:15px;
+}
+/*注册表单*/
+.formtable{
+	width:640px;height:22px;
+	border:1px solid #ccc;
+	font-size:12px;
+	color:#333;
+}
+/*.formtable lable{
+	text-align: right;
+}*/
+.mlable{
+	width:135px;
+	text-align:right;
+}
+.formtable input{
+	width:240px;height:20px;
+	margin-top:2px;
+	margin-bottom:2px;
+	margin-left:2px;
+	border:1px solid #A9A9A9;
+}
+.fotmtable span{
+	color:#0000ff;
+}
+table,tr,td{
+	border:1px solid #ccc;
+}
+table{
+	border-collapse:collapse;
+}
+span{
+	font-size: 12px;
+	color:blue;
+}
+.footer{
+    width:650px;height:50px;
+    border:1px solid #ddd;
+    border-top:none;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 23px;
+}
+.btn{
+	width: 85px;height:20px;
+	text-align: center;
+	line-height: 20px;
+	margin:0 auto;
+	display: inline-block;
+
+}
+.copyright{
+	width:650px;height: 20px;
+	line-height:20px;
+	text-align: center;
+	font-size: 12px;
+}

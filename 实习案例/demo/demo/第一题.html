@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第一题</title>
+	<style>
+    html, body, .parent, .main, .side{
+    	margin: 0;padding: 0;height: 100px;
+    }
+    .parent{
+    	width:810px;margin:250px auto;
+    	text-align: center;
+    	color:white;font-size: 50px;
+    }
+    .main{
+    	background-color:blue;
+    	float:right;width:600px;
+    	margin:auto;
+    	
+    }
+    .side{
+    	background-color:red;
+    	float:left;width:200px;
+    	margin:auto;
+    	
+    }
+    .clearfix:after{
+    	content:'.';display:block;clear:both;
+    	height:0;overflow:hidden;visibility:hidden;
+    }
+	</style>
+</head>
+<body>
+	<div class="parent clearfix"> 
+    <div class="side">侧栏</div>
+    <div class="main">主栏</div>
+</div>
+</body>
+</html>

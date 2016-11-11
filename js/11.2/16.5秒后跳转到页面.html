@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+    var box =  $("box");
+    var count = 5;
+
+    setTimeout(go,1000);
+    function go(){
+        count--;
+        box.innerHTML = "<a href='http://www.baidu.com'>"+count +"秒后，跳转到页面</a>";
+        if(count <=0){//时间到0了，应该执行跳转
+            //js控制页面跳转  BOM
+            window.location.href = "http://www.baidu.com";
+        }
+        else{
+            //递归调用:自己调用自己
+            setTimeout(go,1000);
+        }
+    }
+</script>
+</html>

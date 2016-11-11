@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉框</title>
+	<style>
+    *{
+    	margin:0;padding:0;
+    }
+    	.title{
+        width:50px;height:28px;
+        border:1px solid #ddd;
+        background-color:#eee;
+        text-align:center;
+        line-height:28px;
+	}
+	.content{
+		width:80px;height:120px;
+		margin-top:1px;
+	}
+	.box{
+		height:30px;width:100%;
+		border:1px solid #ddd;
+		background-color:white;
+		padding:auto 10px;
+		text-align:center;
+		font:12px "宋体";color:black;
+		line-height:30px;
+	}
+	.box1{
+		height:30px;width:100%;
+		border:1px solid #ddd;
+		background-color:#ddd;
+		padding:auto 10px;
+		text-align:center;
+		font:12px "宋体";color:black;
+		line-height:30px;
+	}
+	.box:hover,.box1:hover{
+        background-color:#ddd;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<button class="title">按钮</button>
+	</div>
+	<div>
+		<div class="content">
+			<select class="box">
+		        <optgroup label="下拉菜单项">
+		        	<option>下拉菜单</option>
+		        	<option selected>下拉菜单</option>
+		        	<option>下拉菜单</option>
+		        </optgroup>
+		    </select>    
+			<select class="box1">
+		        <optgroup label="下拉菜单项">
+		        	<option>下拉菜单</option>
+		        	<option selected>下拉菜单</option>
+		        	<option>下拉菜单</option>
+		        </optgroup>
+		    </select>
+			<select class="box">
+		        <optgroup label="下拉菜单项">
+		        	<option>下拉菜单</option>
+		        	<option selected>下拉菜单</option>
+		        	<option>下拉菜单</option>
+		        </optgroup>
+		    </select>
+			<select class="box">
+		        <optgroup label="下拉菜单项">
+		        	<option>下拉菜单</option>
+		        	<option selected>下拉菜单</option>
+		        	<option>下拉菜单</option>
+		        </optgroup>
+		    </select>
+		</div>
+	</div>
+</body>
+</html>

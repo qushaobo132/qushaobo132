@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div id="m-div"></div>
+<div class="demo"></div>
+<div></div>
+<div class="demo"></div>
+<div></div>
+<div></div>
+<div class="demo"></div>
+<div></div>
+<div></div>
+</body>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+    //封装的getClass方法
+    function getElemByClass(className){
+        //判断浏览器是否支持原生方法
+        if(document.getElementsByClassName){
+            return document.getElementsByClassName(className);
+        }else{
+//                    var txt = className.split(" ")
+            //通过getElementsByTagName("*")找到页面所有标签
+            var elems = document.getElementsByTagName("*");
+            //定义数组，用来存放匹配className的元素
+            var arr = [];
+//                 遍历所有元素,找包含className的元素，然后放入arr
+            for(var i=0;i<elems.length;i++){
+                //对于有多个class的元素，先对类名进行切割  class="demo test"
+                var txtArr = elems[i].className.split(" ");
+                //遍历类名数组
+                for(var j=0;j<txtArr.length;j++){
+                    //如果包含className
+                    if(txtArr[j] == className){
+                        //将包含类名的--元素--放入arr
+                        arr.push(elems[i]);
+                    }
+                }
+            }
+            return arr;
+        }
+    }
+    //$("#id")  $(".demo") $("div")
+    function $(str){
+        //找到传入字符串的首位
+        var s = str.charAt(0);  //charAt通过索引位置找字符
+        var ss = str.substr(1); //字符串截取 substring slice substr
+        switch (s){
+            case '#':
+                return document.getElementById(ss);
+                break;
+            case ".":
+                return getElemByClass(ss);
+                break;
+            default:
+                return document.getElementsByTagName(str);
+                break;
+        }
+    }
+
+    $("#m-div").style.backgroundColor = 'purple';
+
+    for(var i=0;i<$(".demo").length;i++){
+        $(".demo")[i].style.backgroundColor = 'lightskyblue';
+    }
+
+    console.log($("div"));
+    for(var i=0; i<$("div").length;i++){
+        $("div")[i].style.WebkitTransform = 'rotate(45deg)';
+    }
+
+</script>
+</html>

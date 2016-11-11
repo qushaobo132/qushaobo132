@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单标签</title>
+</head>
+<body>
+<form action="/login" method="post">
+    用户名：<input type="text" name="username">	<br>
+    密码：<input type="password" name="pwd"><br>
+    性别：<input type="radio" name="gender" checked> 男
+          <input type="radio" name="gender">女<br>
+    爱好：<input type="checkbox" name="like" checked>   游戏 
+          <input type="checkbox" name="like"checked disabled> 抽烟
+          <input type="checkbox" name="like" disabled> 喝酒<br>
+    地区：<select>
+           <optgroup label="山西">
+           	<option>晋城</option>
+           	<option selected>长治</option>
+           	<option>高平</option>
+           </cptgroup>	
+           <optgroup label="山东">
+           	<option>济南</option>
+           	<option>淄博</option>
+           	<option>烟台</option>
+           </cptgroup>
+          </select><br>
+          个人简介：<textarea cols="30" rows="10"></textarea><br>
+    头像：<input type="file">
+    <button>注册</button>
+    <button type="reset">重置</button>     
+</form>
+</body>
+</html>

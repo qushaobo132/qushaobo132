@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三行两列自适应</title>
+	<style>
+        html,body{
+        	margin:0;text-align:center;
+        	height:100%;
+        }
+        .head, .foot{
+        	line-height: 100px;height:100px;
+        	background-color:#000; color:#fff;
+        }
+        body{
+        	display:flex; flex-flow:column;
+        }
+       
+        .container{
+        	flex:1;display: flex;
+        	width:960px;align-self:center;
+        }
+        .side{
+        	width:200px;
+        	background-color: yellow;
+        }
+        .main{
+        	flex:1;margin-left: 10px;
+        	background-color: pink;
+        }
+
+	</style>
+</head>
+<body>
+	<div class="head">dead</div>
+	<div class="container">
+		<div class="side">side</div>
+		<div class="main">main</div>
+	</div>
+	<div class="foot">foot</div>
+</body>
+</html>

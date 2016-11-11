@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<fieldset style="width: 500px; margin: 0px auto;">
+    <legend>注册新用户</legend>
+    <form action="1.html" method="post" id="regForm">
+        <table align="center" width="500" cellpadding="5">
+            <tr>
+                <td width="30%" align="right">用户名:</td>
+                <td>
+                    <input type="text" id="username">
+                    <span id="usernameSpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">密码:</td>
+                <td>
+                    <input type="password" id="password">
+                    <span id="passwordSpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">确认密码:</td>
+                <td>
+                    <input type="password" id="confirm">
+                    <span id="confirmSpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">邮箱:</td>
+                <td>
+                    <input type="text" id="email">
+                    <span id="emailSpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">城市:</td>
+                <td>
+                    <select id="city">
+                        <option value="">-请选择城市-</option>
+                        <option value="bj">北京</option>
+                        <option value="cd">成都</option>
+                        <option value="gz">广州</option>
+                    </select>
+                    <span id="citySpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">性别:</td>
+                <td>
+                    <label><input type="radio" name="gender" value="male"> 男 </label>
+                    <label><input type="radio" name="gender" value="female"> 女 </label>
+                    <span id="genderSpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">兴趣:</td>
+                <td>
+                    <label><input type="checkbox" name="interest" value="somke"> 抽烟 </label>
+                    <label><input type="checkbox" name="interest" value="drink"> 喝酒 </label>
+                    <label><input type="checkbox" name="interest" value="tangtou"> 烫头 </label>
+                    <span id="interestSpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2"><input type="submit" value="注册新用户"></td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+</body>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+    //根据提示信息是否为空改变文本颜色
+    function changeColorBySpan(spanId,msg){
+        $(spanId).parentNode.parentNode.style.color = msg == ""?"black":"red";
+    }
+    //封装文本输入框样式的校验的方法
+    function checkTextInput(inputId,regex,msg,filed,inputSpanId){
+        if(!($(inputId).value).trim()){  //当输入值为空的时候
+            msg = filed+"必须填写";
+        }else if(!regex.test($(inputId).value)){
+            msg = filed+"不符合规则";
+        }else{
+            msg = "";
+        }
+        $(inputSpanId).innerHTML = msg;
+        changeColorBySpan(inputSpanId,msg);
+    }
+    //校验用户名
+    function checkUserName(){
+        var msg= "";
+        checkTextInput("username",/[\w_$]{6,16}/,msg,"用户名","usernameSpan");
+        return msg == "";
+    }
+    //添加失去焦点事件
+    $("username").onblur = checkUserName;
+
+    //密码校验
+    function checkPwd(){
+        var msg = "";
+        checkTextInput("password",/[\w_$]{6,16}/,msg,"密码","passwordSpan");
+        return msg == "";
+    }
+
+    $("password").onblur = checkPwd;
+
+    //密码确认
+    function confirmPwd(){
+        //得到两次输入的密码
+        var msg = "";
+        if($("password").value != $("confirm").value){
+            msg = "两次输入密码不一致";
+        }else{
+            msg = "";
+        }
+        $("confirmSpan").innerHTML = msg;
+        changeColorBySpan("confirmSpan",msg);
+        return msg == "";
+    }
+    $("confirm").onblur = confirmPwd;
+    //邮箱验证
+    function checkEmail(){
+        var regex = /\w{6,16}@\w{2,15}(\.)[a-zA-Z]{2,8}/;  //判断邮箱的正则表达式
+        var msg = "";
+        checkTextInput("email",regex,msg,"邮箱","emailSpan");
+        return msg == "";
+    }
+    $("email").onblur = checkEmail;
+
+    //城市校验
+    function checkCity(){
+        var msg = "";
+        if(!$("city").value){
+            msg = "请选择城市";
+        }else{
+            msg = "";
+        }
+        $("citySpan").innerHTML = msg;
+        changeColorBySpan("citySpan",msg);
+        return msg == "";
+    }
+    $("city").onchange = checkCity;
+
+    //性别校验
+    function checkGender(){
+        var gender = document.getElementsByName("gender");
+        var msg = "";
+        if(!gender[0].checked && !gender[1].checked){
+            msg = "请选择性别";
+        }else{
+            msg = "";
+        }
+        $("genderSpan").innerHTML = msg;
+        changeColorBySpan("genderSpan",msg);
+        return msg == "";
+    }
+    document.getElementsByName("gender")[0].onclick = checkGender;
+    document.getElementsByName("gender")[1].onclick = checkGender;
+
+    //兴趣校验
+    function checkInterest(){
+        var interests = document.getElementsByName("interest");
+        var msg = "";
+        if(!interests[0].checked && !interests[1].checked && !interests[2].checked){
+            msg = "兴趣必须选择";
+        }else{
+            msg = "";
+        }
+        $("interestSpan").innerHTML = msg;
+        changeColorBySpan("interestSpan",msg);
+        return msg == "";
+    }
+    document.getElementsByName("interest")[0].onclick = checkInterest;
+    document.getElementsByName("interest")[1].onclick = checkInterest;
+    document.getElementsByName("interest")[2].onclick = checkInterest;
+    //表单最终校验
+    function checkForm(){  //注意函数作用域
+        return checkUserName() && checkPwd() && confirmPwd() && checkEmail() && checkCity() && checkGender() && checkInterest();
+    }
+    //给表单绑定提交事件
+    $("regForm").onsubmit= checkForm;
+</script>
+</html>

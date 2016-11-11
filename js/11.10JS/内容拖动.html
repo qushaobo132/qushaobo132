@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width:300px;
+            height:400px;
+            border:1px solid #ccc;
+            margin:100px;
+            padding-right:20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .content{
+            width:300px;
+            margin-top: 5px;
+            padding-bottom: 10px;
+            position: absolute;
+            top:0;
+        }
+        .scroll{
+            width:20px;
+            height:100%;
+            background-color:#ccc;
+            position: relative;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .bar{
+            width: 100%;
+            background-color: orchid;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="content">
+        《DOTA 2》是一款由Valve开发免费的多人在线战斗竞技类游戏（MOBA）。2011年Dota2开始在Windows平台上进行测试，它的前身是魔兽争霸三及扩展版本冰封王座中的一张自定义游戏地图。截至2013年6月，Dota2支持Windows系统、OS X系统及Linux系统。Dota2是steam平台上活跃人数最多的游戏之一，最高在线人数超过100万。
+        Dota2的游戏比赛在两个队伍间进行，每个队伍有五名玩家，每个队伍都有一条优势路。每个队伍的游戏目标是摧毁对面要塞中的远古遗迹。每个玩家从111位能力风格技能迥异的英雄中选择一位进行操控。在比赛中，玩家在相互对抗的过程中为各自的英雄收集金钱、经验及道具。
+        Dota2的发展开始于2009年，曾受雇于Valve的Iceforg作为当时dota模组的领导设计者。Dota2因其可玩性、产品质量及继任者对前作者的良好继承而广受好评，但诟病游戏对新手来说比较难上手。2015年9月份dota2在起源更新到起源2后使用该引擎，成为第一个使用这款引擎的游戏。
+        Dota2有遍及世界的专业比赛，来自世界范围内的队伍在各种地区联盟举办的比赛及锦标赛中进行对抗。在所有专业级的锦标赛中，规模最大的锦标赛被称为国际邀请赛。国际邀请赛是由Valve举办，每年一度的赛事在西雅图的钥匙球馆举办（2011年第一届TI邀请赛在德国科隆举办）。
+        2015年国际邀请赛的奖金总额超过了1800万美元，创下了电子竞技历史上奖金额最高的记录。从2015年开始，Valve开始举办季节性的锦标赛，被称为特锦赛， 第一个特锦赛在德国的法兰克福举办。
+    </div>
+    <div class="scroll">
+        <div class="bar"></div>
+    </div>
+</div>
+</body>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+    var content = $("box").children[0];
+    var scroll = $("box").children[1];
+    var bar = scroll.children[0];
+    //bar 的高度
+    bar.style.height = $("box").offsetHeight * $("box").offsetHeight / content.offsetHeight + "px";
+
+    bar.onmousedown = function(event){
+        var event = event ||window.event;
+        var y = event.clientY - this.offsetTop;
+        var that = this;
+        document.onmousemove = function(event){
+            var event = event || window.event;
+            var val = event.clientY - y;
+            if(val<0){
+                val = 0;
+            }else if(val >scroll.offsetHeight - that.offsetHeight){
+                val = scroll.offsetHeight - that.offsetHeight;
+            }
+            content.style.top = - (content.offsetHeight - scroll.offsetHeight)/
+                    (scroll.offsetHeight - bar.offsetHeight) * val +"px";
+            that.style.top = val + "px";
+            //防止文字拖动
+            window.getSelection() ? window.getSelection().removeAllRanges() :document.selection.empty();
+        }
+    }
+    document.onmouseup = function(){
+        document.onmousemove = null;
+    }
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //定义函数
+    //1.函数声明
+    function add(a,b){
+        return a+b;//定义函数返回值
+    }
+    function add(a,b){  //会覆盖之前声明的add函数
+        return a*b;
+    }
+    function sayHello(){  //没有返回值
+        console.log("hello");
+    }
+    //2.函数表达式
+    var add = function(a,b){
+        return a-b;
+    }
+    sayHello();  //调用函数
+    var x = add(1,2);
+    console.log(x);
+
+</script>
+</body>
+</html>

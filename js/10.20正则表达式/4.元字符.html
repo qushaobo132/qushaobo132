@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //元字符：具有特殊意义的字符
+    var boo = /\d/.test('123124124'); //true
+    boo = /\D/.test('123122111'); //false
+    boo = /\s/.test(' ');  //true
+    boo = /\S/.test(' ');  //false
+    boo = /\w/.test('2012'); //true
+    boo = /\W/.test('asd2012'); //false
+    console.log(boo);
+</script>
+</body>
+</html>

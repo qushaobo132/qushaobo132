@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="file" id="file"/><span></span>
+</body>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+    $('file').onchange = function (){
+        var path = this.value;
+        console.log(path);
+        var suffix =path.slice(path.lastIndexOf('.'));
+        console.log(suffix);
+        if(suffix=='.jpg'|| suffix=='.png'|| suffix=='.gif'){
+            $('file').nextElementSibling.innerHTML = '';
+        }else{
+            $('file').nextElementSibling.innerHTML = '文件格式不正确';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 600px;
+            height: 40px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <select id="yearSelect"><option value="">--请选择年份--</option></select>
+    <select id="monthSelect"><option value="">--请选择月份--</option></select>
+    <select id="daySelect"><option value="">--请选择日期--</option></select>
+</div>
+</body>
+<script>
+    /**
+     * 级联日期：1. 日期根据年份和月份的变化来生成日期
+     *          2. 闰年的判断
+     */
+    function $(id){
+        return document.getElementById(id);
+    }
+    //封装创建option的方法
+    function createOpts(i){
+        var option = document.createElement("option");
+        option.value = i;
+        option.innerHTML = i +'';
+        return option;
+    }
+    //生成年份
+    var now = new Date().getFullYear();
+    for(var i = now;i >= now - 100;i--){
+        //创建option节点，添加到yearSelect
+        var option = createOpts(i);
+        $("yearSelect").appendChild(option);
+    }
+
+    //生成月份
+    for(var i=1;i<=12;i++){
+        //创建option节点，添加到yearSelect
+       var option = createOpts(i);
+        $("monthSelect").appendChild(option);
+    }
+
+    //根据年份和月份生成日期
+    //给年份和月份下拉框，绑定onchange事件
+    $("yearSelect").onchange = getDays;
+    $("monthSelect").onchange = getDays;
+
+    function getDays(){
+        //先删除之前生成的日期
+        var optionArr = $("daySelect").options; //通过下拉框的option属性，得到所有option
+        for(var i = 1;i<optionArr.length;i++){
+            $("daySelect").removeChild(optionArr[i--]);
+        }
+
+        //如果没有选择年份和月份，就不生成日期
+       var year =  $("yearSelect").value;
+       var month =  $("monthSelect").value;
+
+      if(year == "" || month == ""){
+         return;
+      }
+        //days当前月份的天数
+        var days = 0;
+        if(month == '1' ||month == '3' ||month == '5' ||month == '7'||month == '8'||month == '10'||month == '12'){
+            days = 31;
+        }else if(month == '2'){
+            days = leapYear(year)?29:28;
+        }else{
+            days = 30;
+        }
+
+        for(var i=1;i<=days;i++){
+            //创建option节点，添加到yearSelect
+            var option = createOpts(i);
+            $("daySelect").appendChild(option);
+        }
+    }
+    //判断是否闰年
+    function leapYear(year){
+        //1.如果年份是普通年，能被4整除，不能被100整除，则为闰年  2004  1900
+        //2.如果年份是世纪年，能被400整除，才是闰年
+        return !(year%(year % 100? 4 :400));
+//        if(year%100){  //如果不能被100整除，有余数，是普通年
+//            return !year%4;
+//        }else{   //如果能被100整除 ,余数为0，是世纪年
+//            return !year%400;
+//        }
+    }
+
+
+</script>
+</html>

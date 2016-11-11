@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">开始</button>
+<div id="box"></div>
+</body>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+    //缓动动画几个要素：起始位置  0 目标位置 500 步长
+    var start = 0, target = 500;
+    $("btn").onclick = function(){
+        setInterval(function () {
+            //起始值越来越大，目标位置不变，离目标位置越近，起始值增加的距离越来越小，速度会越来越慢
+            start = start + (target-start)/10;
+            $("box").style.left = start + "px";
+        },0.1);
+
+    }
+</script>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画</title>
+</head>
+<body>
+<h1>动画  markdown</h1>
+
+<h2>transition  过渡</h2>
+
+<h3>过渡属性</h3>
+
+<pre><code>transition-property:none | all | singleProperty单个属性</code></pre>
+
+<h3>过渡时间</h3>
+
+<pre><code>transition-duration:0s;</code></pre>
+
+<h3>过渡时间函数 -动画执行的速率</h3>
+
+<pre><code>transition-timing-function：ease | linear | ease-in | ease-out |cubic-bezier(0,0,1,1) |step(3,start|end)
+ease 两头慢中间快
+linear 线性 匀速
+ease-in 开始慢
+ease-out 结束慢
+cubic-bezier(0.8,0,0,0.8)
+step(3,start|end)  分三步</code></pre>
+
+<h3>过渡延时</h3>
+
+<pre><code>transition-delay </code></pre>
+
+<h3>属性合写</h3>
+
+<pre><code>transition:left 2s ease 1s,color 2s;</code></pre>
+
+<h6>----------—-------------------------------------</h6>
+
+<h2>动画 两大特点：多关键帧 自动载入</h2>
+
+<pre><code>animation  </code></pre>
+
+<h3>定义的关键帧名字 可写多个</h3>
+
+<pre><code>animation-name </code></pre>
+
+<h3>关键帧</h3>
+
+<pre><code>@keyframes name{} </code></pre>
+
+<h3>动画执行时间</h3>
+
+<pre><code> animation-duration </code></pre>
+
+<h3>过渡时间函数 -动画执行的速率</h3>
+
+<pre><code> animation-timing-function:ease | linear | ease-in | ease-out |
+     cubic-bezier(0.8,0,0,0.8)</code></pre>
+
+<h3>动画执行的次数</h3>
+
+<pre><code> animation-iteration-count: infinite(无尽) | 2(number)</code></pre>
+
+<h3>动画执行的方向</h3>
+
+<pre><code> animation-direction:normal(默认) | reverse(反转) | alternate(原路返回) | alternate-reverse(反向+原路返回)</code></pre>
+
+<h3>动画执行状态</h3>
+
+<pre><code> animation-play-state:running(运行) | paused (暂停)</code></pre>
+
+<h3>动画执行延时</h3>
+
+<pre><code> animation-delay:0s | 1s;</code></pre>
+
+<h3>动画结束时的保留状态</h3>
+
+<pre><code> animation-fill-mode:none(默认) | backwards | forwards |both </code></pre>
+
+<h3>属性合写</h3>
+
+<pre><code>animation:;</code></pre>
+
+<h4>提示：需要外界条件触发的是transtion</h4>
+
+<h3>变形属性回顾：</h3>
+
+<pre><code>transform: rotate()旋转 scale()缩放 skew()倾斜 translate()移动 
+persperctive: 视距
+transform-style:preserve-3d; 支持3D变形</code></pre>
+</body>
+</html>

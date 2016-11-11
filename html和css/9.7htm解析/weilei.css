@@ -1,0 +1,52 @@
+a:hover{ /*鼠标悬停*/
+	color:red;
+
+}
+a:visited{ /*访问过的*/
+	/*color:#ccc;*/
+}
+a:active{
+	color:yellow;
+}
+
+
+li:first-child{  /*:first-child第一子元素*/
+	font-weight: bold;
+}
+.news::first-letter{/*首字*/
+    font-size:36px;
+}
+.news::first-line{/*首行*/
+    color:#000;
+}
+.news::before{/*在某元素之前*/
+    content:"XXXX";
+}
+.news::after{/*在某元素之后*/
+    content: "XXXX"
+}
+.news::selection{/*选中的内容*/
+    color:yellow;
+}
+/*组合选择器*/
+.main h3{/*后代选择器*/
+    color:green;
+}
+.main>h3{/*子选择器*/
+    color:red;
+}
+h3+span{/*相邻兄弟选择器*/
+    color:blue;
+}
+h3~span{/*通用兄弟选择器*/
+    color:red;
+}
+/*群选择器*/
+
+div,h3,span{
+	text-decoration:line-through;
+}
+
+.main,.weilei,.furit{
+	text-decoration:underline;
+}

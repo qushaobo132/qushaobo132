@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var arr= [];
+    function Person(){
+
+    }
+    console.log(new String().toString()); //空字符串
+    console.log(arr.toString());  //空数组
+    console.log({}.toString());
+    console.log(new Function().toString());
+    console.log(new Person().toString());
+    /**
+     * 结论：Object.prototype.toString可以识别标准类型以及内置的类型，
+     *      不能识别自定义对象类型
+     */
+
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二级菜单</title>
+	<style>
+		body{
+  			margin:100px;
+		}
+		ul,li,dl,dd,dt {
+		  margin: 0;
+		  padding: 0;
+		  font-size: 14px;
+		}
+		ul,li {
+		  list-style: none;
+		}
+		a {
+		  text-decoration: none;
+		  color: #000;
+		  background: #fff;
+		  display: inline-block;
+		  width: 100px;
+		  /* 当前的宽度和li hover之后的宽度主要是为了遮挡接缝  */
+ 		  position: relative;
+		}
+		ul {
+		  width: 160px;
+		  position: relative;
+		}
+		li {
+		  height: 30px;
+		  line-height: 30px;
+		  padding-left: 10px;
+		  margin-top: -1px;
+		  background: #fff;
+		  border: 1px solid #CCCCCC;
+		}
+		li:hover dl {
+		  display: block;
+		}
+		li:hover .arrow {
+		  display: none;
+		}
+		li:hover {
+		  border-left: 5px solid #004080;
+		  border-right: none;
+		  width: 145px;
+		}
+		li:hover a {
+		  width: 160px;
+		  z-index: 15;
+		}
+		.arrow {
+		  position: absolute;
+		  right: 10px;
+		  margin-top: 10px;
+		  display: inline-block;
+		  height: 8px;
+		  width: 8px;
+		  border-top: 2px solid #999999;
+		  border-right: 2px solid #999999;
+		  transform: rotate(45deg);
+		}
+		dl {
+		  position: absolute;
+		  background: #fff;
+		  border: 1px solid #ccc;
+		  height: 250px;
+		  width: 300px;
+		  top: 0;
+		  left: 160px;
+		  display: none;
+		  z-index: 10;
+		  margin-left: -1px;
+		  padding: 20px;
+		  box-shadow: 1px 2px 3px rgba(0, 0, 0, .1);
+		}
+		dd {
+		  display: inline-block;
+		  margin-right: 15px;
+		}
+	</style>
+</head>
+<body>
+<ul>
+  <li class="nav-1"><a href="#">第一层菜单</a><span class="arrow"></span>
+    <dl class="nav-2">
+      <dt>二层菜单主标题1页</dt>
+      <dd>二层小标题</dd>
+      <dd>二层小标题</dd>
+      <dd>二层小标题</dd>
+    </dl>
+  </li>
+  <li class="nav-1"><a href="#">第一层菜单</a><span class="arrow"></span>
+    <dl class="nav-2">
+      <dt>二层菜单主标题2页</dt>
+      <dd>二层小标题</dd>
+      <dd>二层小标题</dd>
+      <dd>二层小标题</dd>
+    </dl>
+  </li>
+  <li class="nav-1"><a href="#">第一层菜单</a><span class="arrow"></span>
+    <dl class="nav-2">
+      <dt>二层菜单主标题3页</dt>
+      <dd>二层小标题</dd>
+      <dd>二层小标题</dd>
+      <dd>二层小标题</dd>
+    </dl>
+  </li>
+  <li class="nav-1"><a href="#">第一层菜单</a><span class="arrow"></span>
+    <dl class="nav-2">
+      <dt>二层菜单主标题4页</dt>
+      <dd>二层小标题</dd>
+      <dd>二层小标题</dd>
+      <dd>二层小标题</dd>
+    </dl>
+  </li>
+  <li class="nav-1"><a href="#">第一层菜单</a><span class="arrow"></span>
+    <dl class="nav-2">
+      <dt>二层菜单主标题5页</dt>
+      <dd>二层小标题</dd>
+      <dd>二层小标题</dd>
+      <dd>二层小标题</dd>
+    </dl>
+  </li>
+</ul>
+</body>
+</html>

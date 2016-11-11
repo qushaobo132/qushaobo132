@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	window.onload=function(){
+		// var divs=document.getElementsByClassName("demo");//大部分浏览器都支持，低版本的IE不支持
+		// console.log(divs.length);
+		// 封装getElementsByClassName,以兼容低版本IE浏览器
+		function getElemByClass(className){
+			if(document.getElementsByClassName){
+			return document.getElementsByClassName(className);
+		}else{
+			//按空格来分割类
+			var txt=className.split("")
+			//通过getElementsByTagName("*")找到页面所有标签
+			var elems=document.getElementsByTagName("*");
+			//定义数组，用来存放匹配className的元素
+			var arr=[];
+			//遍历所有元素，找到包含className的元素，然后放入arr
+			for(i=0;i<elems.length;i++){
+				//对于有多个class的元素，先对类名进行切割
+				var txtArr=elems[i].className.split("");
+				//遍历类名数组
+				for(j=0;j<txtArr.length;j++){
+					if(txtArr[j]==className){
+						//将包含类名的元素都放入arr
+						arr.push(elems[i]);
+					}
+				}
+			}
+			return arr;
+		}
+	}
+	var divs = getElemByClass("aaa");
+	console.log(divs.length);
+}
+	</script>
+</head>
+<body>
+<div></div>
+<div class="demo test"></div>
+<div></div>
+<div></div>
+<div class="demo test"></div>
+<div class="aaa test"></div>
+<div></div>
+<div class="demo"></div>
+<div></div>
+<div></div>
+</body>
+</html>
