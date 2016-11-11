@@ -1,0 +1,19 @@
+body{
+	background: url(../images/csyj.jpg) no-repeat;
+	background-size:cover;
+}
+.login{
+	width: 450px;
+	height: 300px;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #000;
+	transform:translate(-50%,-50%);
+	border-radius: 10px;
+	padding: 10px;
+}
+button{
+	margin-top: 20px;
+}

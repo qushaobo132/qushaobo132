@@ -1,0 +1,155 @@
+body{
+    background-color: #1f668b;
+}
+input {
+    width: 200px;
+}
+/*定义红色的字*/
+span {
+    color: red;
+    font-size: 12px;
+}
+/*定义头部样式*/
+.h {
+    width: 710px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.h img {
+    position: relative;
+    margin-top: 12px;
+    margin-left: 14px;
+}
+.h ul li {
+    display: inline;
+    position: relative;
+    top: -36px;
+    left: 540px;
+}
+.h ul li a {
+    color: #ef0c9c;
+    text-decoration: none;
+    font-size: 12px;
+}
+/*定义主体部分样式*/
+.c {
+    width: 710px;
+    height: auto;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+.c h3 {
+    margin-top: 0px;
+}
+.c table {
+    width: 670px;
+    height: auto;
+    border: 1px solid #cfcdcd;
+    border-spacing: 0px;
+    border-collapse: 0px;
+}
+.td_1 {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    line-height: 15px;
+}
+.td_1 a {
+    color: #0c7cef;
+}
+.td_2 {
+    border-top: 1px solid #cfcdcd;
+    border-bottom: 1px solid #cfcdcd;
+    background-color: #ececec;
+    color: #0362d7;
+    font-size: 14px;
+    padding: 5px;
+}
+.td_3 {
+    width: 130px;
+    border-right: 1px solid #cfcdcd;
+    text-align: right;
+    font-size: 12px;
+    border-bottom: 1px solid #cfcdcd;
+}
+.td_4 {
+    font-size: 12px;
+    border-bottom: 1px solid #cfcdcd;
+}
+.td_5 {
+    font-size: 12px;
+    border-bottom: 1px solid #cfcdcd;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.td_6 {
+    border-bottom: 1px solid #cfcdcd;
+    background-color: #ececec;
+    color: #0362d7;
+    font-size: 14px;
+    padding: 5px;
+}
+.td_7 {
+    width: 710px;
+    height: 80px;
+    font-size: 12px;
+    text-align: center;
+}
+.c_1 {
+    color: #0362d7;
+    display: inline;
+    line-height: 15px;
+}
+.c_2 {
+    display: inline;
+    color: #0362d7;
+    font-size: 12px;
+}
+.c_3 {
+    font-size: 12px;
+    display: inline;
+}
+.o_1 {
+    border-bottom: 1px solid #cfcdcd;
+    padding-bottom: 2px;
+}
+.fr_1 {
+    display: inline;
+}
+.fr_2 {
+    font-size: 12px;
+}
+.formsub{
+    width: 638px;
+    height: 85px;
+    border: 1px solid #ccc;
+    border-top: none;
+    text-align: center;
+    line-height: 85px;
+}
+.btn{
+    width: 85px;
+    height: 22px;
+    display: inline-block;
+}
+/*页脚部分*/
+.f{
+    width: 710px;
+    height: auto;
+    background-color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: -12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}

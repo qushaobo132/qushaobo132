@@ -4,40 +4,45 @@
 	<meta charset="UTF-8">
 	<title>百度一下 你就知道</title>
 	<link rel="shortcut icon" href="images/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="fonts/iconfont.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
-	<div class="nav">
-		<ul>
-			<li><a href="#">糯米</a></li>
-			<li><a href="#">新闻</a></li>
-			<li><a href="#">hao123</a></li>
-			<li><a href="#">地图</a></li>
-			<li><a href="#">视频</a></li>
-			<li><a href="#">贴吧</a></li>
-			<li><a href="#">登录</a></li>
-			<li><a href="#">设置</a></li>
-		</ul>
-		<div class="more">
-			<a href="#">更多产品</a>
-		</div>
+<!-- 头部导航 -->
+<div class="nav">
+	<ul>
+		<li><a href="#">糯米</a></li>
+		<li><a href="#">新闻</a></li>
+		<li><a href="#">hao123</a></li>
+		<li><a href="#">地图</a></li>
+		<li><a href="#">视频</a></li>
+		<li><a href="#">贴吧</a></li>
+		<li><a href="#">登录</a></li>
+		<li><a href="#">设置</a></li>
+	</ul>
+	<div class="more">
+		<a href="#">更多产品</a>
 	</div>
+</div>
 </header>
 <article>
-	<div class="lg">
-		<img src="images/bd_logo1.png" alt="baidu">
-	</div>
-	<!-- 搜索框 -->
-	<div class="search">
-		<form action="/login" method="post">
-				<input type="text" name="text" autofocus>
-				<span>百度一下</span>
-		</form>
-	</div>
+<!-- logo图片 -->
+<div class="lg">
+	<img src="images/bd_logo1.png" alt="baidu">
+</div>
+<!-- 搜索框 -->
+<div class="search">
+	<form action="/login" method="post">
+			<input type="text" name="text" autofocus>
+			<button><i class="iconfont"></i></button>
+			<button class="btn">百度一下</button>
+	</form>
+</div>
 </article>
 <footer>
+<!-- 尾部二维码 -->
 <div class="tail">
 	<div class="code">
 		<div class="code_img"></div>
@@ -53,8 +58,7 @@
 			<p>一元大餐</p>
 		</div>
 	</div>
-	<div>
-	</div>
+<!-- 页脚声明 -->
 <div class="statement">
 	<p class="links">
 	<a href="#">把百度设为主页</a>

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新教员注册第二步-青岛家教网</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+	<!-- 头部 -->
+	<div class="header">
+		<a href="#">
+			<img class="logo" src="images/logo.gif" alt="青岛家教网">
+		</a>
+		<ul class="nav">
+			<li><a href="#">注册</a></li>
+			<li><a href="#">登录</a></li>
+			<li><a href="#">收藏本站</a></li>
+		</ul>
+	</div>
+	<!-- /头部 -->
+	<h3 class="title">新教员注册第二步</h3>
+	<!-- 主体内容 -->
+	<div class="main">
+		<!-- 重要声明 -->
+		<div class="state">
+			<p>您的注册资料越详细就越有利于家长和学员检索，也就越容易获得家长的预约，所以请您务必如实详细地填写。 其中红<br>
+色星号（<font color="red">*</font>）为必填。我们已对您的个人信息做保密处理，您的信息是安全的。<br>
+您选择的是大学生身份,若有误请<a href="#" style="text-decoration:underline;">返回</a>更改</p>
+		</div>
+		<!-- 基本资料 -->
+		<div class="reginfo">
+			<h4>基本资料</h4>
+			<form action="#" method="post">
+				<table border="0" style="border:none;" class="regtable">
+					<tr>
+						<td class="mlable">*真实姓名：</td>
+						<td>
+							<input type="text" name="rname"><br>
+							<span>
+							<font color="red">注意：</font>姓名应与身份证完全一致，本网站将对你的姓名严格保密，只显示您的姓，如“张教员”。此部分将在认证时严格审查，一经填写不得修改，与证件不符者将不能通过认证！</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="mlable">身份证/护照：</td>
+						<td>
+							<input type="text" name="pid">
+							<span>(此项将严格保密，不对外公开)</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="mlable">*性别：</td>
+						<td>
+							<select name="gender" id="gender">
+								<option value="">请选择</option>
+								<option value="1">男</option>
+								<option value="0">女</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="mlable">*出生年份：</td>
+						<td>
+							<select name="biryear" id="biryear">
+								<option value="">选择 年</option>
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="mlable">*专业：</td>
+						<td>
+							<input type="text" name="major">
+							<span>
+								请如实填写专业全名，以学生证为准。此部分将在认证时严格审查，与证件不符者将不能通过认证！
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="mlable">*目前(最高)学历:</td>
+						<td>
+							<select name="edubg" id="">
+								<option value="">---请选择---</option>
+								<option value="大专">大专</option>
+								<option value="本科">本科</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="mlable">*目前身份：</td>
+						<td>
+							<select name="identity" id="identity">
+								<option value="">--请选择--</option>
+								<option value="大专在读">大专在读</option>
+								<option value="本科在读">本科在读</option>
+							</select>
+							<span> 请及时更新自己的身份，暑假期间注册，请选择下一学期的身份</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="mlable">*籍贯(生源地)：</td>
+						<td>
+							<select name="area" id="area">
+								<option value="">--请选择--</option>
+								<option value="青岛市南">青岛市南</option>
+								<option value="青岛市北">青岛市北</option>
+							</select>
+							<span>（并非指当前所在地）</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="mlable">*毕业/就读高校：</td>
+						<td>
+							<select style="width:120px;" name="school" id="school">
+									<option value="">----请选择----</option>
+								<option value="清华">清华</option>
+								<option value="北大">北大</option>
+							</select>
+							<span>若列表中无选项，请在文本框中填写</span>
+							<input type="text" name="school" style="width:145px;height:20px;">
+						</td>
+					</tr>
+					<tr>
+						<td class="mlable">*高中母校：</td>
+						<td>
+							<input style="width:175px;" type="text" name="hischool">
+							<span>请填全称（省份、市、中学名称，如果是省市重点中学请注明）</span>
+						</td>
+					</tr>
+					<tr>
+	                    <td class="td_6" colspan="2">联系方式</td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>手机/小灵通:</td>
+	                    <td class="td_5">
+	                        <form>
+	                            <input type="text" required="required" />
+	                            <div class="c_2">最好留下多个联系方式，换号时请及时更新联系方式</div>
+	                        </form>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>目前住所:</td>
+	                    <td class="o_1">
+	                        <select>
+	                            <option>—请选择—</option>
+	                            <option value="非青岛地区">非青岛地区</option>
+	                            <option value="市南---团岛">市南---团岛</option>
+	                            <option value="市南---火车站（栈桥）">市南---火车站（栈桥）</option>
+	                            <option value="市南---中山路">市南---中山路</option>
+	                            <option value="市南---海大鱼山校区（大学路）">市南---海大鱼山校区（大学路）</option>
+	                            <option value="市南---汇泉广场">市南---汇泉广场</option>
+	                            <option value="市南---八大关">市南---八大关</option>
+	                            <option value="市南---市政府">市南---市政府</option>
+	                            <option value="市南---书城">市南---书城</option>
+	                            <option value="市南---广电大厦（大福源）">市南---广电大厦（大福源）</option>
+	                            <option value="市南---澳柯玛立交桥（百安居）">市南---澳柯玛立交桥（百安居）</option>
+	                            <option value="市南---青岛大学（麦岛）">市南---青岛大学（麦岛）</option>
+	                            <option value="市南---东部市立医院">市南---东部市立医院</option>
+	                            <option value="市南---湛山">市南---湛山</option>
+	                            <option value="市北---小港">市北---小港</option>
+	                            <option value="市北---市立医院（西部）">市北---市立医院（西部）</option>
+	                            <option value="市北---电子信息城">市北---电子信息城</option>
+	                            <option value="市北---台东">市北---台东</option>
+	                            <option value="市北---内蒙古路长途汽车站">市北---内蒙古路长途汽车站</option>
+	                            <option value="市北---错埠岭小区">市北---错埠岭小区</option>
+	                            <option value="市北---浮山后">市北---浮山后</option>
+	                            <option value="市北---山东路家乐福">市北---山东路家乐福</option>
+	                            <option value="市北---敦化路">市北---敦化路</option>
+	                            <option value="市北---青岛图书馆">市北---青岛图书馆</option>
+	                            <option value="四方---四方利群">四方---四方利群</option>
+	                            <option value="四方---青岛理工大学（抚顺路）">四方---青岛理工大学（抚顺路）</option>
+	                            <option value="四方---兴隆路">四方---兴隆路</option>
+	                            <option value="四方---杭州路">四方---杭州路</option>
+	                            <option value="四方---瑞昌路">四方---瑞昌路</option>
+	                            <option value="四方---宜昌路">四方---宜昌路</option>
+	                            <option value="四方---孤山村">四方---孤山村</option>
+	                            <option value="四方---东方家园（公交四公司）">四方---东方家园（公交四公司）</option>
+	                            <option value="四方---水清沟（市肿瘤医院）">四方---水清沟（市肿瘤医院）</option>
+	                            <option value="四方---青岛科技大学（胜利桥）">四方---青岛科技大学（胜利桥）</option>
+	                            <option value="四方---海琴广场">四方---海琴广场</option>
+	                            <option value="四方---北岭">四方---北岭</option>
+	                            <option value="四方---杨家群">四方---杨家群</option>
+	                            <option value="李沧---太原路">李沧---太原路</option>
+	                            <option value="李沧---沧口">李沧---沧口</option>
+	                            <option value="李沧---振华路立交桥">李沧---振华路立交桥</option>
+	                            <option value="李沧---李沧区政府">李沧---李沧区政府</option>
+	                            <option value="李沧---李沧广场">李沧---李沧广场</option>
+	                        </select>
+	                        <div class="c_2">选择离您的住所最近的地点</div>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3">家庭或校外住所:</td>
+	                    <td class="o_1">
+	                        <select>
+	                            <option>—请选择—</option>
+	                            <option value="非青岛地区">非青岛地区</option>
+	                            <option value="市南---团岛">市南---团岛</option>
+	                            <option value="市南---火车站（栈桥）">市南---火车站（栈桥）</option>
+	                            <option value="市南---中山路">市南---中山路</option>
+	                            <option value="市南---海大鱼山校区（大学路）">市南---海大鱼山校区（大学路）</option>
+	                            <option value="市南---汇泉广场">市南---汇泉广场</option>
+	                            <option value="市南---八大关">市南---八大关</option>
+	                            <option value="市南---市政府">市南---市政府</option>
+	                            <option value="市南---书城">市南---书城</option>
+	                            <option value="市南---广电大厦（大福源）">市南---广电大厦（大福源）</option>
+	                            <option value="市南---澳柯玛立交桥（百安居）">市南---澳柯玛立交桥（百安居）</option>
+	                            <option value="市南---青岛大学（麦岛）">市南---青岛大学（麦岛）</option>
+	                            <option value="市南---东部市立医院">市南---东部市立医院</option>
+	                            <option value="市南---湛山">市南---湛山</option>
+	                            <option value="市北---小港">市北---小港</option>
+	                            <option value="市北---市立医院（西部）">市北---市立医院（西部）</option>
+	                            <option value="市北---电子信息城">市北---电子信息城</option>
+	                            <option value="市北---台东">市北---台东</option>
+	                            <option value="市北---内蒙古路长途汽车站">市北---内蒙古路长途汽车站</option>
+	                            <option value="市北---错埠岭小区">市北---错埠岭小区</option>
+	                            <option value="市北---浮山后">市北---浮山后</option>
+	                            <option value="市北---山东路家乐福">市北---山东路家乐福</option>
+	                            <option value="市北---敦化路">市北---敦化路</option>
+	                            <option value="市北---青岛图书馆">市北---青岛图书馆</option>
+	                            <option value="四方---四方利群">四方---四方利群</option>
+	                            <option value="四方---青岛理工大学（抚顺路）">四方---青岛理工大学（抚顺路）</option>
+	                            <option value="四方---兴隆路">四方---兴隆路</option>
+	                            <option value="四方---杭州路">四方---杭州路</option>
+	                            <option value="四方---瑞昌路">四方---瑞昌路</option>
+	                            <option value="四方---宜昌路">四方---宜昌路</option>
+	                            <option value="四方---孤山村">四方---孤山村</option>
+	                            <option value="四方---东方家园（公交四公司）">四方---东方家园（公交四公司）</option>
+	                            <option value="四方---水清沟（市肿瘤医院）">四方---水清沟（市肿瘤医院）</option>
+	                            <option value="四方---青岛科技大学（胜利桥）">四方---青岛科技大学（胜利桥）</option>
+	                            <option value="四方---海琴广场">四方---海琴广场</option>
+	                            <option value="四方---北岭">四方---北岭</option>
+	                            <option value="四方---杨家群">四方---杨家群</option>
+	                            <option value="李沧---太原路">李沧---太原路</option>
+	                            <option value="李沧---沧口">李沧---沧口</option>
+	                            <option value="李沧---振华路立交桥">李沧---振华路立交桥</option>
+	                            <option value="李沧---李沧区政府">李沧---李沧区政府</option>
+	                            <option value="李沧---李沧广场">李沧---李沧广场</option>
+	                        </select>
+	                        <div class="c_2">请家在青岛市区或住在校外的教员填写</div>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>Email:</td>
+	                    <td class="td_5">
+	                        <form>
+	                            <input type="email" required="required" />
+	                            <div class="c_2">(为通知合适您的家教及找回密码，请认真填写)</div>
+	                        </form>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3">QQ:</td>
+	                    <td class="td_5">
+	                        <form>
+	                            <input type="text" />
+	                        </form>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3">详细地址:</td>
+	                    <td class="td_5">
+	                        <form>
+	                            <input type="text" />
+	                            <div class="c_2"> (以方便我们给您寄送家教相关资料及协议等。)</div>
+	                        </form>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_6" colspan="2">家教信息</td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>普通话:</td>
+	                    <td class="o_1">
+	                        <select>
+	                            <option value="标准">标准</option>
+	                            <option value="一般">一般</option>
+	                            <option value="较差">较差</option>
+	                        </select>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>第一外语:</td>
+	                    <td class="o_1">
+	                        <select>
+	                            <option value="英语">英语</option>
+	                            <option value="日语">日语</option>
+	                            <option value="韩语">韩语</option>
+	                            <option value="法语">法语</option>
+	                            <option value="德语">德语</option>
+	                            <option value="西班牙语">西班牙语</option>
+	                            <option value="葡萄牙语">葡萄牙语</option>
+	                            <option value="阿拉伯语">阿拉伯语</option>
+	                            <option value="俄语">俄语</option>
+	                            <option value="其他">其他</option>
+	                        </select>
+	                        <select>
+	                            <option value="标准">标准</option>
+	                            <option value="一般">一般</option>
+	                            <option value="较差">较差</option>
+	                        </select>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3">第二外语:</td>
+	                    <td class="o_1">
+	                        <select>
+	                            <option value="无">无</option>
+	                            <option value="英语">英语</option>
+	                            <option value="日语">日语</option>
+	                            <option value="韩语">韩语</option>
+	                            <option value="法语">法语</option>
+	                            <option value="德语">德语</option>
+	                            <option value="西班牙语">西班牙语</option>
+	                            <option value="葡萄牙语">葡萄牙语</option>
+	                            <option value="阿拉伯语">阿拉伯语</option>
+	                            <option value="俄语">俄语</option>
+	                            <option value="其他">其他</option>
+	                        </select>
+	                        <select>
+	                            <option value="标准">标准</option>
+	                            <option value="一般">一般</option>
+	                            <option value="较差">较差</option>
+	                        </select>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>自我描述:</td>
+	                    <td class="td_5">
+	                        <textarea rows="6" cols="60"></textarea>
+	                        <br/>
+	                        <div class="c_2"> 全面展示你的实力和优势特长，增加你简历的含金量！例如：在比赛中得过什么重要奖项，获得过什么奖学金，取得什么样的高考成绩，有哪些能证明你能力的资格证书之类。 不得少于50字，不得超过500字。家长选择你的重要依据，请认真填写！</div>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3">家教经历
+	                        <br/>(教学成果):</td>
+	                    <td class="td_5">
+	                        <textarea rows="6" cols="60"></textarea>
+	                        <br/>
+	                        <div class="c_2"> 这些内容是对您教学水平最有力和最直接的反映！是学员选择您的一项重要依据。字数500字以内。最好说明辅导时间、学生年级、辅导效果。可参考以下形式：2008年10月-12月，市南区初三学生英语，期终考试从全班第30名上升至第10名，英语从60分提升到80分。</div>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>可辅导的科目
+	                        <br/>(不超过10项):</td>
+	                    <td class="td_5">
+	                        <span>教员在选择中考、高考、雅思、新概念等有难度的科目时应量力而行，最好有实际辅导经验。</span>
+	                        <form class="fr_2">
+	                            <br/>
+	                            <div class="c_3">-----小学-----</div>
+	                            <br/>
+	                            <input style="width:10px" type="checkbox" name="course" value="小学语文" />小学语文
+	                            <input style="width:10px" type="checkbox" name="course" value="小学数学" />小学数学
+	                            <input style="width:10px" type="checkbox" name="course" value="小学英语" />小学英语
+	                            <input style="width:10px" type="checkbox" name="course" value="小学奥数" />小学奥数
+	                            <input style="width:10px" type="checkbox" name="course" value="小学全科" />小学全科
+	                            <br/>
+	                            <br/>
+	                            <div class="c_3">-----初中-----</div>
+	                            <br/>
+	                            <input style="width:10px" type="checkbox" name="course" value="初中语文" />初中语文
+	                            <input style="width:10px" type="checkbox" name="course" value="初中英语" />初中英语
+	                            <input style="width:10px" type="checkbox" name="course" value="初中数学" />初中数学
+	                            <input style="width:10px" type="checkbox" name="course" value="初中物理" />初中物理
+	                            <input style="width:10px" type="checkbox" name="course" value="初中化学" />初中化学
+	                            <input style="width:10px" type="checkbox" name="course" value="初中地理" />初中地理
+	                            <input style="width:10px" type="checkbox" name="course" value="初中生物" />初中生物
+	                            <input style="width:10px" type="checkbox" name="course" value="初中数理化" />初中数理化
+	                            <input style="width:10px" type="checkbox" name="course" value="初中全科" />初中全科
+	                            <input style="width:10px" type="checkbox" name="course" value="初中奥数" />初中奥数
+	                            <input style="width:10px" type="checkbox" name="course" value="中考英语" />中考英语
+	                            <input style="width:10px" type="checkbox" name="course" value="中考数学" />中考数学
+	                            <input style="width:10px" type="checkbox" name="course" value="中考物理" />中考物理
+	                            <input style="width:10px" type="checkbox" name="course" value="中考化学" />中考化学
+	                            <input style="width:10px" type="checkbox" name="course" value="中考数理化" />中考数理化
+	                            <input style="width:10px" type="checkbox" name="course" value="中考全科" />中考全科
+	                            <input style="width:10px" type="checkbox" name="course" value="中考心理辅导" />中考心理辅导
+	                            <br/>
+	                            <br/>
+	                            <div class="c_3">-----高中-----</div>
+	                            <br/>
+	                            <input style="width:10px" type="checkbox" name="course" value="高一高二语文" />高一高二语文
+	                            <input style="width:10px" type="checkbox" name="course" value="高一高二英语" />高一高二英语
+	                            <input style="width:10px" type="checkbox" name="course" value="高一高二数学" />高一高二数学
+	                            <input style="width:10px" type="checkbox" name="course" value="高一高二物理" />高一高二物理
+	                            <input style="width:10px" type="checkbox" name="course" value="高一高二化学" />高一高二化学
+	                            <input style="width:10px" type="checkbox" name="course" value="高一高二地理" />高一高二地理
+	                            <input style="width:10px" type="checkbox" name="course" value="高一高二生物" />高一高二生物
+	                            <input style="width:10px" type="checkbox" name="course" value="高考语文" />高考语文
+	                            <input style="width:10px" type="checkbox" name="course" value="高考英语" />高考英语
+	                            <input style="width:10px" type="checkbox" name="course" value="高考数学" />高考数学
+	                            <input style="width:10px" type="checkbox" name="course" value="高考物理" />高考物理
+	                            <input style="width:10px" type="checkbox" name="course" value="高考化学" />高考化学
+	                            <input style="width:10px" type="checkbox" name="course" value="高考数理化" />高考数理化
+	                            <input style="width:10px" type="checkbox" name="course" value="高考美术" />高考美术
+	                            <input style="width:10px" type="checkbox" name="course" value="高考理综" />高考理综
+	                            <input style="width:10px" type="checkbox" name="course" value="高考文综" />高考文综
+	                            <input style="width:10px" type="checkbox" name="course" value="高考心理辅导" />高考心理辅导
+	                            <br/>
+	                            <br/>
+	                            <div class="c_3">-----大学-----</div>
+	                            <br/>
+	                            <input style="width:10px" type="checkbox" name="course" value="高等数学" />高等数学
+	                            <input style="width:10px" type="checkbox" name="course" value="考研数学" />考研数学
+	                            <br/>
+	                            <br/>
+	                            <div class="c_3">-----英语-----</div>
+	                            <br/>
+	                            <input style="width:10px" type="checkbox" name="course" value="英语口语" />英语口语
+	                            <input style="width:10px" type="checkbox" name="course" value="新概念英语" />新概念英语
+	                            <input style="width:10px" type="checkbox" name="course" value="牛津英语" />牛津英语
+	                            <input style="width:10px" type="checkbox" name="course" value="英语四级" />英语四级
+	                            <input style="width:10px" type="checkbox" name="course" value="英语六级" />英语六级
+	                            <input style="width:10px" type="checkbox" name="course" value="GRE" />GRE
+	                            <input style="width:10px" type="checkbox" name="course" value="托福" />托福
+	                            <input style="width:10px" type="checkbox" name="course" value="雅思" />雅思
+	                            <input style="width:10px" type="checkbox" name="course" value="初级商务英语" />初级商务英语
+	                            <input style="width:10px" type="checkbox" name="course" value="高级商务英语" />高级商务英语
+	                            <input style="width:10px" type="checkbox" name="course" value="剑桥英语" />剑桥英语
+	                            <br/>
+	                            <br/>
+	                            <div class="c_3">-----小语种-----</div>
+	                            <br/>
+	                            <input style="width:10px" type="checkbox" name="course" value="日语" />日语
+	                            <input style="width:10px" type="checkbox" name="course" value="法语" />法语
+	                            <input style="width:10px" type="checkbox" name="course" value="德语" />德语
+	                            <input style="width:10px" type="checkbox" name="course" value="韩语" />韩语
+	                            <input style="width:10px" type="checkbox" name="course" value="俄语" />俄语
+	                            <input style="width:10px" type="checkbox" name="course" value="西班牙语" />西班牙语
+	                            <input style="width:10px" type="checkbox" name="course" value="葡萄牙语" />葡萄牙语
+	                            <input style="width:10px" type="checkbox" name="course" value="阿拉伯语" />阿拉伯语
+	                            <br/>
+	                            <br/>
+	                            <div class="c_3">-----艺术-----</div>
+	                            <br/>
+	                            <input style="width:10px" type="checkbox" name="course" value="摄影" />摄影
+	                            <input style="width:10px" type="checkbox" name="course" value="书法" />书法
+	                            <input style="width:10px" type="checkbox" name="course" value="美术" />美术
+	                            <input style="width:10px" type="checkbox" name="course" value="漫画" />漫画
+	                            <input style="width:10px" type="checkbox" name="course" value="中国画" />中国画
+	                            <input style="width:10px" type="checkbox" name="course" value="西洋画" />西洋画
+	                            <input style="width:10px" type="checkbox" name="course" value="交谊舞" />交谊舞
+	                            <input style="width:10px" type="checkbox" name="course" value="芭蕾舞" />芭蕾舞
+	                            <input style="width:10px" type="checkbox" name="course" value="美声" />声乐(美声)
+	                            <input style="width:10px" type="checkbox" name="course" value="民族" />声乐(民族)
+	                            <br/>
+	                            <br/>
+	                            <div class="c_3">-----乐器-----</div>
+	                            <br/>
+	                            <input style="width:10px" type="checkbox" name="course" value="钢琴" />钢琴
+	                            <input style="width:10px" type="checkbox" name="course" value="电子琴" />电子琴
+	                            <input style="width:10px" type="checkbox" name="course" value="小提琴" />小提琴
+	                            <input style="width:10px" type="checkbox" name="course" value="大提琴" />大提琴
+	                            <input style="width:10px" type="checkbox" name="course" value="长笛" />长笛
+	                            <input style="width:10px" type="checkbox" name="course" value="吉他" />吉他
+	                            <input style="width:10px" type="checkbox" name="course" value="手风琴" />手风琴
+	                            <input style="width:10px" type="checkbox" name="course" value="萨克斯" />萨克斯
+	                            <input style="width:10px" type="checkbox" name="course" value="打击乐" />打击乐
+	                            <input style="width:10px" type="checkbox" name="course" value="小号" />小号
+	                            <input style="width:10px" type="checkbox" name="course" value="大号" />大号
+	                            <input style="width:10px" type="checkbox" name="course" value="圆号" />圆号
+	                            <input style="width:10px" type="checkbox" name="course" value="二胡" />二胡
+	                            <input style="width:10px" type="checkbox" name="course" value="笛子" />笛子
+	                            <input style="width:10px" type="checkbox" name="course" value="琵琶" />琵琶
+	                            <input style="width:10px" type="checkbox" name="course" value="古筝" />古筝
+	                            <input style="width:10px" type="checkbox" name="course" value="古琴" />古琴
+	                            <br/>
+	                            <br/>
+	                            <div class="c_3">-----计算机-----</div>
+	                            <br/>
+	                            <input style="width:10px" type="checkbox" name="course" value="计算机基本操作" />计算机基本操作
+	                            <input style="width:10px" type="checkbox" name="course" value="数据库" />数据库
+	                            <input style="width:10px" type="checkbox" name="course" value="网页设计与制作" />网页设计与制作
+	                            <input style="width:10px" type="checkbox" name="course" value="计算机应用能力" />计算机应用能力
+	                            <input style="width:10px" type="checkbox" name="course" value="Linux或Unix " />Linux或Unix
+	                            <input style="width:10px" type="checkbox" name="course" value="网站开发" />网站开发
+	                            <input style="width:10px" type="checkbox" name="course" value="图像处理软件" />图像处理软件
+	                            <input style="width:10px" type="checkbox" name="course" value="动画制作" />动画制作
+	                            <input style="width:10px" type="checkbox" name="course" value="程序设计" />程序设计
+	                            <input style="width:10px" type="checkbox" name="course" value="程序设计高级" />程序设计高级
+	                            <input style="width:10px" type="checkbox" name="course" value="微软证书" />微软证书
+	                            <br/>
+	                            <br/>
+	                            <div class="c_3">-----棋类/体育-----</div>
+	                            <br/>
+	                            <input style="width:10px" type="checkbox" name="course" value="围棋" />围棋
+	                            <input style="width:10px" type="checkbox" name="course" value="中国象棋 " />中国象棋
+	                            <input style="width:10px" type="checkbox" name="course" value="国际象棋" />国际象棋
+	                            <input style="width:10px" type="checkbox" name="course" value="中国武术散打" />中国武术散打
+	                            <input style="width:10px" type="checkbox" name="course" value="拳击" />拳击
+	                            <input style="width:10px" type="checkbox" name="course" value="截拳道" />截拳道
+	                            <input style="width:10px" type="checkbox" name="course" value="跆拳道" />跆拳道
+	                            <input style="width:10px" type="checkbox" name="course" value="空手道" />空手道
+	                            <input style="width:10px" type="checkbox" name="course" value="瑜珈" />瑜珈
+	                            <input style="width:10px" type="checkbox" name="course" value="滑冰旱冰" />滑冰旱冰
+	                            <input style="width:10px" type="checkbox" name="course" value="游泳" />游泳
+	                            <input style="width:10px" type="checkbox" name="course" value="乒乓球" />乒乓球
+	                            <input style="width:10px" type="checkbox" name="course" value="羽毛球" />羽毛球
+	                            <input style="width:10px" type="checkbox" name="course" value="网球" />网球
+	                        </form>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>最擅长的科目:</td>
+	                    <td class="td_5">
+	                        <form>
+	                            <input type="text" required="required" />
+	                            <div class="c_2">请填写你最拿手、最有经验的科目，例如：“英语、初中数理化、高三数学”，越具体越好，不超过三项</div>
+	                        </form>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>方便授课区域:
+	                    </td>
+	                    <td class="td_5">
+	                        <form>
+	                            <div class="c_3">-----市南-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="市南全区" />
+	                                    <span>市南全区</span>
+	                                </form>
+	                            </div>
+	                            <input style="width:10px" type="checkbox" name="where" value="团岛" />团岛
+	                            <input style="width:10px" type="checkbox" name="where" value="火车站（栈桥）" />火车站（栈桥）
+	                            <input style="width:10px" type="checkbox" name="where" value="中山路" />中山路
+	                            <input style="width:10px" type="checkbox" name="where" value="海大鱼山校区（大学路）" />海大鱼山校区（大学路）
+	                            <input style="width:10px" type="checkbox" name="where" value="汇泉广场" />汇泉广场
+	                            <input style="width:10px" type="checkbox" name="where" value="八大关" />八大关
+	                            <input style="width:10px" type="checkbox" name="where" value="市政府" />市政府
+	                            <input style="width:10px" type="checkbox" name="where" value="书城 " />书城
+	                            <input style="width:10px" type="checkbox" name="where" value="广电大厦（大福源)" />广电大厦（大福源)
+	                            <input style="width:10px" type="checkbox" name="where" value="澳柯玛立交桥（百安居)" />澳柯玛立交桥（百安居)
+	                            <input style="width:10px" type="checkbox" name="where" value="游青岛大学（麦岛）" />青岛大学（麦岛）
+	                            <input style="width:10px" type="checkbox" name="where" value="东部市立医院" />东部市立医院
+	                            <input style="width:10px" type="checkbox" name="where" value="湛山 " />湛山
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----市北-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="市北全区" />
+	                                    <span>市北全区</span>
+	                                </form>
+	                            </div>
+	                            <input style="width:10px" type="checkbox" name="where" value="小港" />小港
+	                            <input style="width:10px" type="checkbox" name="where" value="市立医院（西部）" />市立医院（西部）
+	                            <input style="width:10px" type="checkbox" name="where" value="电子信息城" />电子信息城
+	                            <input style="width:10px" type="checkbox" name="where" value="台东" />台东
+	                            <input style="width:10px" type="checkbox" name="where" value="内蒙古路长途汽车站" />内蒙古路长途汽车站
+	                            <input style="width:10px" type="checkbox" name="where" value="错埠岭小区" />错埠岭小区
+	                            <input style="width:10px" type="checkbox" name="where" value="浮山后" />浮山后
+	                            <input style="width:10px" type="checkbox" name="where" value="山东路家乐福" />山东路家乐福
+	                            <input style="width:10px" type="checkbox" name="where" value="敦化路" />敦化路
+	                            <input style="width:10px" type="checkbox" name="where" value="青岛图书馆" />青岛图书馆
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----四方-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="四方全区" />
+	                                    <span>四方全区</span>
+	                                </form>
+	                            </div>
+	                            <input style="width:10px" type="checkbox" name="where" value="四方利群" />四方利群
+	                            <input style="width:10px" type="checkbox" name="where" value="青岛理工大学（抚顺路）" />青岛理工大学（抚顺路）
+	                            <input style="width:10px" type="checkbox" name="where" value="兴隆路" />兴隆路
+	                            <input style="width:10px" type="checkbox" name="where" value="杭州路" />杭州路
+	                            <input style="width:10px" type="checkbox" name="where" value="瑞昌路" />瑞昌路
+	                            <input style="width:10px" type="checkbox" name="where" value="宜昌路" />宜昌路
+	                            <input style="width:10px" type="checkbox" name="where" value="孤山村" />孤山村
+	                            <input style="width:10px" type="checkbox" name="where" value="东方家园（公交四公司" />东方家园（公交四公司)
+	                            <input style="width:10px" type="checkbox" name="where" value="水清沟（市肿瘤医院）" />水清沟（市肿瘤医院）
+	                            <input style="width:10px" type="checkbox" name="where" value="青岛科技大学（胜利桥）" />青岛科技大学（胜利桥）
+	                            <input style="width:10px" type="checkbox" name="where" value="海琴广场" />海琴广场
+	                            <input style="width:10px" type="checkbox" name="where" value="北岭" />北岭
+	                            <input style="width:10px" type="checkbox" name="where" value="杨家群" />杨家群
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----李沧-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="李沧全区" />
+	                                    <span>李沧全区</span>
+	                                </form>
+	                            </div>
+	                            <input style="width:10px" type="checkbox" name="where" value="太原路" />太原路
+	                            <input style="width:10px" type="checkbox" name="where" value="沧口" />沧口
+	                            <input style="width:10px" type="checkbox" name="where" value="振华路立交桥" />振华路立交桥
+	                            <input style="width:10px" type="checkbox" name="where" value="李沧区政府" />李沧区政府
+	                            <input style="width:10px" type="checkbox" name="where" value="李沧广场" />李沧广场
+	                            <input style="width:10px" type="checkbox" name="where" value="宜李村公园" />李村公园
+	                            <input style="width:10px" type="checkbox" name="where" value="九水路立交桥" />九水路立交桥
+	                            <input style="width:10px" type="checkbox" name="where" value="侯家庄" />侯家庄
+	                            <input style="width:10px" type="checkbox" name="where" value="永安路" />永安路
+	                            <input style="width:10px" type="checkbox" name="where" value="百通花园" />百通花园
+	                            <input style="width:10px" type="checkbox" name="where" value="百通馨园" />百通馨园
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----崂山-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="崂山全区" />
+	                                    <span>崂山全区</span>
+	                                </form>
+	                            </div>
+	                            <input style="width:10px" type="checkbox" name="where" value="颐中体育场" />颐中体育场
+	                            <input style="width:10px" type="checkbox" name="where" value="辽阳路立交桥" />辽阳路立交桥
+	                            <input style="width:10px" type="checkbox" name="where" value="青岛国际啤酒城" />青岛国际啤酒城
+	                            <input style="width:10px" type="checkbox" name="where" value="青岛科技大学东部校区" />青岛科技大学东部校区
+	                            <input style="width:10px" type="checkbox" name="where" value="石老人" />石老人
+	                            <input style="width:10px" type="checkbox" name="where" value="青岛市博物馆" />青岛市博物馆
+	                            <input style="width:10px" type="checkbox" name="where" value="海大崂山校区" />海大崂山校区
+	                            <input style="width:10px" type="checkbox" name="where" value="中韩" />中韩
+	                            <input style="width:10px" type="checkbox" name="where" value="沙子口" />沙子口
+	                            <input style="width:10px" type="checkbox" name="where" value="北村" />北村
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----城阳-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="城阳" /> 城阳
+	                                </form>
+	                            </div>
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----黄岛-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="黄岛" /> 黄岛
+	                                </form>
+	                            </div>
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----即墨-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="即墨" /> 即墨
+	                                </form>
+	                            </div>
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----胶州-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="胶州" /> 胶州
+	                                </form>
+	                            </div>
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----胶南-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="胶南" /> 胶南
+	                                </form>
+	                            </div>
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----平度-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="平度" /> 平度
+	                                </form>
+	                            </div>
+	                        </form>
+	                        <form>
+	                            <div class="c_3">-----莱西-----
+	                                <form>
+	                                    <input style="width:10px" type="checkbox" name="where" value="莱西" /> 莱西
+	                                </form>
+	                            </div>
+	                        </form>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>可授课时间:</td>
+	                    <td class="td_5">
+	                        <form>
+	                            <input type="text" placeholder="授课时间无限制" required="required" />
+	                            <div class="c_2">（请注意及时更新授课时间）</div>
+	                        </form>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>辅导方式:</td>
+	                    <td class="td_5">
+	                        <form>
+	                            <input style="width:10px" type="checkbox" name="way" value="教员上门" />教员上门
+	                            <input style="width:10px" type="checkbox" name="way" value="学员上门" />学员上门
+	                            <input style="width:10px" type="checkbox" name="way" value="网上辅导" />网上辅导
+	                            <input style="width:10px" type="checkbox" name="way" value="可协商" />可协商
+	                        </form>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td class="td_3"><span>*</span>薪酬要求:</td>
+	                    <td class="td_5">
+	                        <textarea rows="6" cols="60" placeholder="执行青岛家教网薪水标准"></textarea>
+	                        <br/>
+	                        <div class="c_2"> 默认为接受青岛家教网的课时费标准（<a href="#">查看详细的报酬标准</a>)，如果不同意，也可以在表中列出自己的薪酬要求，如：小学**元/时、小学奥数**元/时、初一**元/时、高三**元/时、钢琴**元/时、陪读**元/月。</div>
+	                    </td>
+	                </tr>
+				</table>
+				<!-- <input type="submit" value="提交"> -->
+				<div class="formsub">
+					<button class="btn">提交</button>
+				</div>
+			</form>
+		</div>
+	</div>
+<div>
+</div>
+	<!-- /主体内容 -->
+	<!-- 页脚 -->
+	<div class="footer">
+		<p>
+			Copyright &copy; 2003～2008 版权所有 青岛家教网
+		</p>
+	</div>
+</div>
+</body>
+</html>
